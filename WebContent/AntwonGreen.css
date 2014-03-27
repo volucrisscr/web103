@@ -1,7 +1,30 @@
 @CHARSET "ISO-8859-1";
 
-<link rel="stylesheet" href="antwongreen.css">
 
-p{
-	color:yellow;
+div{background-color:purple;
+  border-radius: 5px;
+	display: inline-table
+	width:20px;
+	height:20px;
+
+
+}
+
+
+
+
+p{  	background-color: red;
+	border-radius: 5px;
+	display: inline-table
+	width:40px;
+	height:40px;
+
+}
+li{
+	background-color: maroon;
+}
+
+ol{
+	background-color:olive;
+	
 }
