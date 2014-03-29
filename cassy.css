@@ -1,9 +1,17 @@
 @CHARSET "UTF-8";
 
 div {
-	color: red;
+	color: mediumblue;
+	border: 5px solid;
+	border-radius: 15px;
 }
 
 H2,H3 {
 	text-align:center;
+	color: mediumblue;
 }
+
+body {
+	background-color:cornflowerblue;
+}
+
