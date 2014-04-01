@@ -14,12 +14,15 @@ H2,H3 {
 body {
 	background-color:cornflowerblue;
 }
+p {
+	text-align: center;
+}
+
 
 ul{
 	 list-style-type: square;
 }
 
-a{
-	display:block;
-	table-layout: auto;
+div#sidebarnav{
+	float: left;
 }
