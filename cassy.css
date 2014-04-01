@@ -15,3 +15,11 @@ body {
 	background-color:cornflowerblue;
 }
 
+ul{
+	 list-style-type: square;
+}
+
+a{
+	display:block;
+	table-layout: auto;
+}
