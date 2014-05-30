@@ -1,0 +1,28 @@
+@CHARSET "UTF-8";
+
+div {
+	color: mediumblue;
+	border: 5px solid;
+	border-radius: 15px;
+}
+
+H2,H3 {
+	text-align:center;
+	color: mediumblue;
+}
+
+body {
+	background-color:cornflowerblue;
+}
+p {
+	text-align: center;
+}
+
+
+ul{
+	 list-style-type: square;
+}
+
+div#sidebarnav{
+	float: left;
+}
