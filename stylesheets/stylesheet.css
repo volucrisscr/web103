@@ -63,7 +63,7 @@ ul.header_left_nav li:hover { border-bottom: solid 5px #ccc; }
 ul.header_right_nav li:hover { border-bottom: solid 5px #ccc; }
 ul.header_right_nav li:hover a { transition: all 0.15s ease; -o-transition: all 0.15s ease; -moz-transition: all 0.15s ease; -webkit-transition: all 0.15s ease; color: #111; }
 div.index_content { width: 100%; min-height: 900px; margin-top: 100px; background-color: #fff; -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5); -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5); box-shadow: 0 1px 3px rgba(0,0,0,0.5); } 
-h2.course_title { margin-top: 100px; width: 100%; text-align: center; font-family: LatoItalic; font-size: 50px; text-shadow: 1px 1px 1px #fff; }
+h2.course_title { margin-top: 80px; width: 100%; text-align: center; font-family: LatoItalic; font-size: 50px; text-shadow: 1px 1px 1px #fff; }
 ul.folder_list { width: 950px; margin: 0 auto; padding-top: 100px; }
 ul.folder_list li { transition: all 0.15s linear; -o-transition: all 0.15s linear; -moz-transition: all 0.15s linear; -webkit-transition: all 0.15s linear; cursor: pointer; width: 100px; height: 100px; float: left; margin-right: 70px; margin-left: 70px; border-radius: 50px; background-color: #777; text-align: center; }
 ul.folder_list li:hover { transition: all 0.15s ease; -o-transition: all 0.15s ease; -moz-transition: all 0.15s ease; -webkit-transition: all 0.15s ease; background-color: #ccc; }
@@ -72,8 +72,8 @@ ul.folder_list li.last_bubble { margin-right: 0px; }
 ul.folder_list li span { transition: all 0.15s linear; -o-transition: all 0.15s linear; -moz-transition: all 0.15s linear; -webkit-transition: all 0.15s linear; color: #fff; font-family: 'Lato'; font-size: 14px; display: inline-block; margin-top: 42px; }
 li.active_link { border-bottom: solid 5px #ccc; }
 li.active_link a { color: #111 !important; }
-div.index_left_content { float: left; background-color: #fff; width: 48%; min-height: 350px; margin: 65px 0 0 2px; text-align: center; padding-bottom: 10px; -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5); -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5); box-shadow: 0 1px 3px rgba(0,0,0,0.5); }
-div.index_right_content { float: right; background-color: #fff; width: 48%; min-height: 350px; margin: 65px 2px 0 0; text-align: center; padding-bottom: 10px; -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5); -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5); box-shadow: 0 1px 3px rgba(0,0,0,0.5); }
+div.index_left_content { float: left; background-color: #fff; width: 48%; min-height: 440px; margin: 45px 0 0 2px; text-align: center; padding-bottom: 10px; -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5); -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5); box-shadow: 0 1px 3px rgba(0,0,0,0.5); }
+div.index_right_content { float: right; background-color: #fff; width: 48%; min-height: 440px; margin: 45px 2px 0 0; text-align: center; padding-bottom: 10px; -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5); -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5); box-shadow: 0 1px 3px rgba(0,0,0,0.5); }
 div.index_bottom_content { float:left; background-color: #fff; width: 946px; min-height: 300px; margin: 35px 0 75px 2px; text-align: center; padding-bottom: 10px; -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5); -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5); box-shadow: 0 1px 3px rgba(0,0,0,0.5); }
 p.content_text { text-align: justify; font-family: "Lato","Arial Black","Arial Bold",sans-serif; width: 85%; margin: 0 auto 20px auto; font-size: 12pt; line-height: 1.4em; color: #777; margin-top: 15px; }
 a.read_more { transition: all 0.15s linear; -o-transition: all 0.15s linear; -moz-transition: all 0.15s linear; -webkit-transition: all 0.15s linear; padding-left: 15px; position: relative; width: 100%; text-align: center; font-family: Lato; font-size: 14px; color: #00afdc; }
