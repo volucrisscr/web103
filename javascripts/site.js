@@ -43,3 +43,29 @@ if ( url.indexOf('assignments') > -1 ) {
 		});
 	});
 }
+
+//=================================
+//auto-height adjustment
+//=================================
+var class1 = $('.index_left_content')[0];
+var class2 = $('.index_right_content')[0];
+var class3 = $('.index_left_content')[1];
+var class4 = $('.index_right_content')[1];
+
+if($(class1).css('height') > $(class2).css('height')){
+	$('#day-1').css('height', $(class1).css('height'));
+	$('#day-2').css('height', $('#day-1').css('height'));
+}
+else if($(class2).css('height') > $(class1).css('height')){
+	$('#day-2').css('height', $(class2).css('height'));
+	$('#day-1').css('height', $('#day-2').css('height'));
+} 
+
+if($(class3).css('height') > $(class4).css('height')){
+	$('#day-3').css('height', $(class3).css('height'));
+	$('#day-4').css('height', $('#day-3').css('height'));
+}
+else if($(class4).css('height') > $(class3).css('height')){
+	$('#day-4').css('height', $(class4).css('height'));
+	$('#day-3').css('height', $('#day-4').css('height'));
+} 
