@@ -50,7 +50,7 @@ img.cdc_logo { margin-top: 12px; }
 
 section.index_content { width: 950px; margin: 0 auto;   min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -60px; }
 div.index_content { width: 100%; min-height: 900px; margin-top: 100px; background-color: #fff; -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5); -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5); box-shadow: 0 1px 3px rgba(0,0,0,0.5); } 
-h2.course_title { /* margin-top: 50px; */ width: 100%; text-align: center; font-family: LatoItalic; font-size: 50px; text-shadow: 1px 1px 1px #fff; padding-top: 30px; padding-bottom: 30px;}
+h2.course_title { /* margin-top: 50px; */ width: 100%; text-align: center; font-family: LatoItalic; font-size: 50px; text-shadow: 1px 1px 1px #fff; padding-top: 30px; padding-bottom: 10px;}
 ul.folder_list { width: 950px; margin: 0 auto; padding-top: 100px; }
 ul.folder_list li { transition: all 0.15s linear; -o-transition: all 0.15s linear; -moz-transition: all 0.15s linear; -webkit-transition: all 0.15s linear; cursor: pointer; width: 100px; height: 100px; float: left; margin-right: 70px; margin-left: 70px; border-radius: 50px; background-color: #777; text-align: center; }
 ul.folder_list li:hover { transition: all 0.15s ease; -o-transition: all 0.15s ease; -moz-transition: all 0.15s ease; -webkit-transition: all 0.15s ease; background-color: #ccc; }
@@ -79,7 +79,12 @@ li.bottom_list_2 {list-style: circle; margin-left: 40px; padding-right:15px;}
 li.bottom_list_1 {list-style: disc; padding-right:15px;}
 i {font-style: italic;}
 
-.navbar{
+#left-margin{margin-left: 50px;}
+#right-margin{margin-right:50px;}
+div.course_title{ display: block; background-color: #FFF;}
+h4.secondary_heading{font-style:italic; font-family: "Lato","Arial Black","Arial Bold",sans-serif; width: 85%; margin: 0 auto 20px auto; font-size: 12pt; line-height: 1.4em; color: #777; text-align: center; padding-bottom: 20px;}
+
+div.navbar{
   background-color: rgb(39, 77, 138);
   height: 130px;
   position: relative;
@@ -103,14 +108,13 @@ img.nav_logo{
 	padding-top: 15px;
 }
 
-.nav_left{
+div.nav_left{
 	float:left;
   width: 40%;
   text-align: right;
 
 }
-
-.nav_right{
+div.nav_right{
 	float: right;
   width: 40%;
   text-align: left;
@@ -123,18 +127,7 @@ a.nav_link{
   text-transform: uppercase;
   font-family: 'Raleway', sans-serif;
 }
-a.nav_link:hover{
-	color: #fff;
-}
-
-#left-margin{margin-left: 50px;}
-#right-margin{margin-right:50px;}
-
-.course_title{
-	display: block;
-	background-color: #FFF;
-	
-}
+a.nav_link:hover{color: #fff;}
 
 /* screencasts */
 
