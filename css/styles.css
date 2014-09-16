@@ -340,13 +340,17 @@ li.desktop_video{
     font-size: 16px;
     line-height: 20px;
 }
-li.desktop_video:hover{
+li.video_nav:hover{
 	color: rgb(39,77,138);
 	transition: all 0.15s ease; -o-transition: all 0.15s ease; -moz-transition: all 0.15s ease; -webkit-transition: all 0.15s ease;
 	text-shadow: 1px 1px 1px #E7E7E7;
 }
 
 li.active_video { /* color:#f39c12; */ font-weight: 600;}
+
+li.video_link{
+	cursor: pointer;
+}
 
 div.video_container{
 	width: 580px; float: left; 
