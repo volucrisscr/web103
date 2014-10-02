@@ -91,21 +91,21 @@
 					  					<li class="exercise assignment" data-index="4"> Assignment 4 </li>
 					  					<li class="exercise assignment" data-index="5"> Assignment 5 </li>
 					  					<li class="exercise assignment" data-index="6"> Assignment 6 </li>
+					  					<li class="exercise assignment" data-index="7"> Assignment 7 </li>
 				  					</ul>
 				  				</li>
 			  					
 			  					<li class="exercise-day"> <span> Day 2 </span>
 				  					<ul class="exercise-list">
-					  					<li class="exercise assignment" data-index="7"> Assignment 7 </li>
 					  					<li class="exercise assignment" data-index="8"> Assignment 8 </li>
 					  					<li class="exercise assignment" data-index="9"> Assignment 9 </li>
 					  					<li class="exercise assignment" data-index="10"> Assignment 10 </li>
+					  					<li class="exercise assignment" data-index="11"> Assignment 11 </li>
 				  					</ul>
 				  				</li>
 
 				  				<li class="exercise-day"> <span> Day 3 </span>
 				  					<ul class="exercise-list">
-					  					<li class="exercise assignment" data-index="11"> Assignment 11 </li>
 					  					<li class="exercise assignment" data-index="12"> Assignment 12 </li>
 					  					<li class="exercise assignment" data-index="13"> Assignment 13 </li>
 					  					<li class="exercise assignment" data-index="14"> Assignment 14 </li>
@@ -374,7 +374,82 @@ Think of it this way:
 				            <h2> All About Functions </h2>
 				            				            
 				            <p class="exercise_box_details">
-				              Place Holder
+				              Sometimes in programming we have to repeat ourselves multiple times. When it comes to that kind of thing, we have a rule in programming. It's called D.R.Y., DON'T REPEAT YOURSELVES. Luckily, in programming, we have a concept called functions that let us perform repetetive behaviors in a simple way.
+				            </p>
+				            
+				            <p class="exercise_box_details">
+				              <ol>
+				              	<li>Let's take a common use case. We want print out to a greeting to the user. If you did that without a function you would do something like this:
+				              	<pre class="visible">var userName = "Josh Soileau";
+console.log('Hello, ' + userName);
+console.log('It's nice to see you today.');
+console.log('Looks like you've got a lot on your plate today.')
+console.log('Better get to work!');</pre>
+				              	</li>
+				              	<li>But if you had different userNames, you'd have to do all 5 lines over and over again for every user. Or, we could just use a function! Here's the function syntax:
+				              	<pre class="visible">
+var myFunctionName = function( PARAMETER TO GIVE THE FUNCTION ) {
+  CODE INSIDE THE FUNCTION
+};
+                  </pre>
+				              	So then, whenever you wanted to run "CODE INSIDE THE FUNCTION", you would just call the function like this:
+				              	<pre class="visible">
+myFunctionName( SOME PARAMETER I WANT TO PASS );
+                  </pre>
+				              	I know that can be confusing, let's see an example.
+								Here's the code we had before, but this time in function form!
+								<pre class="visible">
+var greetTheUser = function( userName ) {
+  console.log('Hello, ' + userName);
+  console.log('It's nice to see you today.');
+  console.log('Looks like you've got a lot on your plate today.')
+  console.log('Better get to work!');
+};
+                  </pre>
+								IMPORTANT NOTE: Just writing that code out WILL NOT RUN that code. 
+								All we did in that code was tell the computer "If anyone ever calls the function 'greetTheUser', do this code right here".
+								To actually run the code, we have to "call" it, like this:
+								<pre class="visible">
+greetTheUser( "Josh Soileau" );
+                  </pre>
+				              	</li>
+				              	<li>
+				              	So what is the thing inside of our call to greetTheUser()?
+								That is our "parameter".
+								Functions work a bit like machines, you give them SOMETHING, and they do things with it!
+								In this case, we are "giving" our greetTheUser function a string called "Josh Soileau".
+								Let's look at our function again:
+								<pre class="visible">
+var greetTheUser = function( userName ) {
+  console.log('Hello, ' + userName);
+  console.log('It's nice to see you today.');
+  console.log('Looks like you've got a lot on your plate today.')
+  console.log('Better get to work!');
+};
+                  </pre>		
+								As you see, our function expects to be passed something (as you can see because there is a variable inside the parenthesis of the function declaration).
+								We are saying that the greetTheUser function expects to be called and passed an argument, and we are going to call that argument 'userName'.
+								The function doesn't know WHAT it is being passed, just that it is being passed SOMETHING.
+								Exercise: Try calling the function with a different data type, like a number, array, or object.
+								<pre>
+greetTheUser( 12.34 );
+greetTheUser( "HAL" );
+                  </pre>
+								As you can see, it treats it the same way! It saves whatever it is being passed into this 'userName' variable, and tries to use it as well as it can.
+				              	</li>
+				              	<li>
+				              	Functions can also return values that we can save for later. See this example:
+				              	<pre class="visible">
+var timesTwo = function(number) {
+    return number * 2;
+};
+
+var thisShouldEqualFourteen = timesTwo( 7 );
+                  </pre>
+				              	The above function expects to receive a number, does some math, and gives back a new number.
+								We can save the result in a variable. Super useful!
+				              	</li>
+				              </ol>
 				            </p>
 				            
 				          </div>
@@ -383,11 +458,124 @@ Think of it this way:
 				          
 				          <div class="exercise_text" data-index="9" >
 
-				            <h2> Info coming soon! </h2>
+				            <h2> All About Scope! </h2>
 				            				            
 				            <p class="exercise_box_details">
-				              Place Holder
+				              Lets take a look at a concept called "scoping".
 				            </p>
+				            
+				            <ol>
+				            	<li>Here's our previous function:
+				            	<pre class="visible">
+var greetTheUser = function( userName ) {
+  console.log('Hello, ' + userName);
+  console.log('It's nice to see you today.');
+  console.log('Looks like you've got a lot on your plate today.')
+  console.log('Better get to work!');
+};
+                  </pre>
+				            	</li>
+				            	<li>Inside this function we make a variable called "userName". What happens if we try and access that variable somewhere else, like this:
+				            	 <pre class="visible">
+var greetTheUser = function( userName ) {
+  console.log('Hello, ' + userName);
+  console.log('It's nice to see you today.');
+  console.log('Looks like you've got a lot on your plate today.')
+  console.log('Better get to work!');
+};
+
+console.log( userName );
+                  </pre>
+				            	What do we get there and why?
+								In JavaScript, variables (and functions) are only available in the context they are defined in.
+				            	</li>
+				            	<li>
+				            	Think of scoping like each bit of code is a small piece of a neighborhood.
+								Each "function" is a fenced in property. Anything on the inside, stays in the inside.
+								In our example above, the "userName" variable is created inside our fenced in yard.
+								But then we try and use that variable OUTSIDE of the fence, and it doesn't work. That is because OUTSIDE of the fence, we don't know what "userName" is, it is undefined!
+				            	</li>
+				            	<li>The same thing will happen here as well:
+				            	<pre class="visible">
+var prepareForUser = function( userName ) {
+  var greetingString = "Hello, " + userName;
+  var userAge = 54;
+  var userFavoriteColor = "Beige";
+};
+
+// ALWAYS REMEMBER TO CALL YOUR FUNCTION!
+// Otherwise, the code inside it won't run! 
+prepareForUser( "Josh Soileau" );
+
+console.log( greetingString );
+console.log( "Your age is " + userAge );
+console.log( "Your favorite color is " + userFavoriteColor );
+                  </pre>
+				            	</li>
+				            	<li>
+				            	So how do we fix that code above??
+								Remember how our code is kind of like a neighborhood with fences in it?
+								Well, if we create a variable OUTSIDE of ALL of the fences, then that variable is available everywhere, even INSIDE the fences.
+								That is called a variable being "global". Let's look at an example:
+								<pre class="visible">
+var wildNeighborhoodDog = "Fido";
+var dogIsFarAway = 1;
+
+var callDog = function( dogName ) {
+
+  if( dogIsFarAway ) {
+    console.log( "Here, " + dogName + ", here boy!" );
+  } else {
+    console.log( "Good boy, " + dogName );
+  }
+
+};
+
+callDog( wildNeighborhoodDog );
+                  </pre>
+								Because our "wildNeighborhoodDog" and "dogIsFarAway" variables are GLOBAL, we can use them inside our "callDog" function.
+								Let's try and fix our code from before. We can solve our problem by making the variables global, like this:
+								   <pre class="visible">
+var greetingString;
+var userAge;
+var userFavoriteColor;
+
+var prepareForUser = function( userName ) {
+  greetingString = "Hello, " + userName;
+  userAge = 54;
+  userFavoriteColor = "Beige";
+};
+
+// ALWAYS REMEMBER TO CALL YOUR FUNCTION!
+// Otherwise, the code inside it won't run! 
+prepareForUser( "Josh Soileau" );
+
+console.log( greetingString );
+console.log( "Your age is " + userAge );
+console.log( "Your favorite color is " + userFavoriteColor );
+                  </pre>
+								All we had to do is DECLARE our variables globally. We didn't even need to assign them any value.
+								Just the act of declaring them outside the function meant that we could access them outside the function later on.
+				            	</li>
+				            	<li>Now we know that we can make variables GLOBAL and have access to them everywhere. So why don't we do this for everything??
+				            	Take a look at this code below, tell me what the output is:
+				            	<pre class="visible">
+var numberOfBalloons = 99;
+var balloonsColor = "Red";
+
+var popOneBalloon = function( balloonsColor ) {
+
+  numberOfBalloons = numberOfBalloons - 1;
+  var balloonsColor = "Blue";
+
+};
+
+console.log( numberOfBalloons + " " +  balloonsColor + " balloons go by." );
+                  </pre>
+				            	What is the output of that code and why? (move the console.log around to learn more)
+				            	</li>
+				            	<li>This type of thing is why it's a bad idea to have too many global variables. By saying that YOUR variable is global, you are effectively preventing other coders from using that variable name in different scopes. If you can, try and do without global variables.</li>
+				            </ol>
 				            
 				          </div>
 				          
@@ -395,11 +583,71 @@ Think of it this way:
 				          
 				          <div class="exercise_text" data-index="10" >
 
-				            <h2> Info coming soon! </h2>
+				            <h2> All About Syntax! </h2>
 				            				            
 				            <p class="exercise_box_details">
-				              Place Holder
+				              Time for some exercise!
 				            </p>
+				            
+				            <p class="exercise_box_details">
+				              Here's an example of a properly formed function:
+				              <pre class="visible">
+var greetTheUser = function( userName ) {
+  console.log('Hello, ' + userName);
+  console.log('It's nice to see you today.');
+  console.log('Looks like you've got a lot on your plate today.')
+  console.log('Better get to work!');
+};</pre>
+				              And here's a properly formatted function call:
+				              <pre class="visible">
+greetTheUser( "Josh Soileau" );</pre>
+				              For reference, this is also a properly formatted function call and is effectively the same thing:
+				              <pre class="visible">
+var myName = "Josh Soileau";
+greetTheUser( myName );</pre>
+				              Here's some examples of functions that are NOT properly formatted, or have scoping issues. See if you can find the bug and fix all of them!
+				            </p>
+				            
+				             <p class="exercise_box_details">
+					              <ul>
+					                <li>
+					                   <pre class="visible">
+var demandFood( snackFood ) {
+  console.log("I demand to be served " + snackFood);
+}
+
+demandFood("Grapes from a Vine");
+                  </pre>
+					                </li>
+					                <li>
+					                 <pre class="visible">
+var thankHostess = function{ action } (
+  console.log('Thank you for ' + action + ".");
+);
+
+thankHostess("feeding me Grapes from a Vine");
+                  </pre>
+					                </li>
+					
+					                <li>
+					                  <pre class="visible">
+function var = inviteToDinner( person ) {
+  console.log( "Okay, fine, " + person + "!");
+  console.log( "You can come to my fancy dinner party!" );
+  console.log( "Stop nagging me!" );
+}
+
+inviteToDinner( "Nagging Steve" );
+                  </pre>
+					                </li>
+					
+					                <li>
+					                  <pre class="visible">
+var (crashTheParty = function( hostess )) {(( console.log("I wasn't invited to " + hostess + "'s party, but I'm coming anyway"); )))}
+                  </pre>
+					                </li>
+					              </ul>
+					            </p>
 				            
 				          </div>
 				          
@@ -407,11 +655,50 @@ Think of it this way:
 				          
 				          <div class="exercise_text" data-index="11" >
 
-				            <h2> Info coming soon! </h2>
+				            <h2> Building an Online Bank </h2>
 				            				            
 				            <p class="exercise_box_details">
-				              Place Holder
+				              	Now it's time for today's big assignment.
+				              	We are going to build a banking system in our browser.
+								For organizational purposes, this would be better kept inside of a ".js" file.
+								So, open up a text editor (like sublime text) and create a new file on the desktop called banking.js
 				            </p>
+				            
+				           <p class="exercise_box_details">
+				              We are going to be creating a series of functions to handle a series of global variables.
+				            </p>
+				            
+				            <p class="exercise_box_details">
+				              These exercises will intentionally be left unanswered for now, and will be filled in during class as we complete them.
+				            </p>
+				            
+				            <p class="exercise_box_details">
+				              <ol>
+				              	<li>First, create global variables for userName, userAddress, accountNumber, accountOpenDate, and accountBalance.
+									For now, these variables will be strings and numbers. We may change that later on to account for multiple account holders if we have time.
+									Declare your variables at the TOP of your file.</li>
+				              	<li>First thing's first. Create a function called printAccountInfo that will print the information for this user's account using console.log.
+									It may be helpful, as well, to create a printBalance function that will ONLY print the balance and not the rest of the info.</li>
+				              	<li>After we have the our printAccountInfo function, we need functions to manage our balance.
+									First, we will need a setBalance function, which will do exactly that, set the accountBalance variable to some number that is passed as a parameter to the setBalance function.</li>
+				              	<li>Next we will need withdraw() and deposit() functions, which will accept a parameter, and use the setBalance function to either add or remove that parameter from the accountBalance function.</li>
+				              	<li>Our customers may also want to change their address. Let's create a setAddress function that will accept a string as a parameter, and set the address variable to that string.</li>
+				              	<li>Let's say we are the most kick ass bank in the world, and we are giving awesome interest rates on savings accounts.
+									Let's say we give a 3% interest rate, and we give it EVERY SINGLE DAY.
+									Make a new function called giveInterest which will increase the balance by 3%.</li>
+				              	<li>One of the selling points of our bank is this awesome interest rate. Sometimes we get requests from our customers to tell them what their balance will be after 10 years in the future, at 3% interest, accrued daily.
+				              		
+				              		Write a function called predictBalance that will accept 1 parameter, the # of years the want to predict, and will return the balance in the account after that amount of time.
+				              		
+				              		Important note: this function DOES NOT CHANGE the balance, it just predicts what the balance will be after X number of years at 3% interest.
+				              		
+				              		Another important note: this can be accomplished a few different ways (like everything in programming). It can be done with for loops, while loops, you can even do it with recursive functions if you want to get elegant.
+				              	</li>
+				              	<li>If time is left over at this point, change our variable types to ARRAYS, and modify all the functions to be able to handle multiple account holders.</li>
+				              </ol>
+				            </p>
+				            
+				           
 				            
 				          </div>
 				          
