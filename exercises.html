@@ -328,7 +328,9 @@ Think of it this way:
 				              </ol>
 				            </p>
 				            
-				          </div><!--*****/////  Assignment Box 7  /////*****-->
+				          </div>
+				          
+				          <!--*****/////  Assignment Box 7  /////*****-->
 				          
 				          <div class="exercise_text" data-index="7" >
 
@@ -706,11 +708,122 @@ var (crashTheParty = function( hostess )) {(( console.log("I wasn't invited to "
 				          
 				          <div class="exercise_text" data-index="12" >
 
-				            <h2> Info coming soon! </h2>
+				            <h2> Object Basics </h2>
 				            				            
 				            <p class="exercise_box_details">
-				              Place Holder
+				              This is where you get your feet wet with objects. Objects are everywhere in JS. They are an additional datatype, like Number and Array. In fact, they are quite similar to arrays in that they are multiple, multidimensional data stores and can contain any type of data. You can have an objet of objects, and object of arrays, etc.
 				            </p>
+				            
+				            <p class="exercise_box_details">
+				              The fundamental difference between objects and arrays is their construction as key/value pairs. Where arrays are simple collections with a numerical key, objects take a specified keyword. Objects can be referenced either by square bracket notation or by dot syntax. More about that below.
+				            </p>
+				            
+				            <p class="exercise_box_details">
+				              We won't get too deep into objects in this class, just enough to get started working with the DOM. But understanding how to use objets is key to understanding more advanced JavaScript and learning how to use JS frameworks like jQuery, Angular, Node, Backbone, Underscore, Moment, Meteor, React... The list goes on (and on).
+				            </p>
+				            
+				            <p class="exercise_box_details">
+				              <ol>
+				              	<li>
+				              		<p class="exercise_box_details">
+				              			Basic Notation. Objects are defined using curly braces. Inside the curly braces, your object will contain one or many key/value pairs, separated by a comma. Each key and value is separated by a colon. The key may be written without quotes, with single-quotes or with double-quotes.
+				              			<pre class="visible">
+{
+  key: 'value',
+  "iAmAKey": "I am a value",
+  'singleQuotes': "double quotes"
+};
+                  </pre>
+				            		</p>
+				              	</li>
+				              	<li>
+				              		<p class="exercise_box_details">
+				              			Accessing Values. To access the value of an object, simply refer to its key either via dot notation or by accessing its key in square brackets.
+				              			 <pre class="visible">
+var dog = {
+  breed: 'Great Dane',
+  color: 'harlequin',
+  food: 'small children'
+};
+
+// get the value using dot notation
+dog.food;
+
+// get the value using bracket notation
+dog['food'];
+
+// ^^^ note that we used food as a string in the last line.
+
+                  </pre>
+				            		</p>
+				              	</li>
+				              	<li>
+				              		<p class="exercise_box_details">
+				              			Properties and Methods. In regular JS, we have variables and functions. In objects, we generally refer to properties and methods in the same way. While this isn't as strict as other programming languages, you're still going to run into the terminology. Properties describe the object. Methods do something.
+				              			 <pre class="visible">
+var dog = {
+  // properties
+
+  breed: 'Great Dane',
+  color: 'harlequin',
+  food: 'small children',
+  
+  // methods
+
+  bark: function() {
+    alert('WOOF!');
+  },
+  
+  getColor: function() {
+    return this.color;
+    // this refers to the context in which the funciton is called
+    // this can get you into trouble
+    // if you're really curious, look up JavaScript's call() funciton
+  }
+};
+
+dog.bark();
+
+dog.getColor();
+                  </pre>
+				            		</p>
+				              	</li>
+				              	<li>
+				              		<p class="exercise_box_details">
+				              			Native Objects. JavaScript comes packages with a number of native objects like Math and Date. Back in the day, many designers worked with the Image object to preload mouseover images before you could really do that with CSS. Native objects ship with the browser (hence native) and are always there.
+				              			<pre class="visible">
+var someDate = new Date();
+someDate.getFullYear(); // ZOMG!
+
+// the Math object is really quite useful
+console.log('The Life of ' + Math.PI);
+
+// no, really
+Math.round(Math.PI);
+
+// by the way, this stuff is case sensitive, so watch out!
+                  </pre>
+				            		</p>
+				              	</li>
+				              	<li>
+				              		<p class="exercise_box_details">
+				              			The document and window Objects. Here is where things get a little more fun, especially for those of you who are bored of working exclusively in the console. Go ahead and type the following into the browser console:
+				              			<pre class="visible">
+window.
+                  </pre>
+				            		</p>
+				              	</li>
+				              </ol>
+				            </p>
+				            
+				            <p class="exercise_box_details">
+				              Notice the console is trying to autocomplete for you. Each autocomplete possibility is a member of the window object. With so many API's within the HTML spec, you have access to a TON of possibilities. Play with window.history and see what's in there.
+				            </p>
+				            
+				            <p class="exercise_box_details">
+				              The same goes for the document object. We have access to all kinds of browser behaviors just through the native document object. This is how we'll manipulate the DOM later on in the class. For now, let's move on ... what is the DOM, anyway?
+				            </p>
+				            
 				            
 				          </div>
 				          
@@ -718,22 +831,131 @@ var (crashTheParty = function( hostess )) {(( console.log("I wasn't invited to "
 				          
 				          <div class="exercise_text" data-index="13" >
 
-				            <h2> Info coming soon! </h2>
+				            <h2> The Document Object Model (DOM) </h2>
 				            				            
 				            <p class="exercise_box_details">
-				              Place Holder
+				              When you write an HTML document and load it in a browser, the browser interprets your HTML and builds a web page. The elements you write, the attributes in your elements and the text inside your elements are all nested together neatly in your HTML. The browser translates this structure into the page as a hierarchy of nodes and relationships. This is the DOM. It is simply a representation of the constructed web page itself, mapped to a hierarchical tree. Think of it as a map. The HTML you write is parsed by the browser and becomes the DOM. The DOM is the foundation of the page you see.
+				            </p>
+				            
+				            <p class="exercise_box_details">
+				              <ol>
+				              	<li>A Simple Page. Consider the following HTML.
+				              	
+				              	<pre class="visible">
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;The World Cup is over&lt;/title&gt;
+    &lt;link rel="icon" type="image/x-icon" href="/images/favicon.ico"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class="container"&gt;
+      &lt;h1 class="header"&gt;The World Cup is, like, over&lt;/h1&gt;
+      &lt;p style="color: #933;"&gt;Now we have to watch baseball. Ugh.&lt;/p&gt;
+      &lt;p class="footnote"&gt;Just kidding! Baseball is totes exciting cuz they score lots.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+                  </pre>
+                  				Once the browser reads the markup and constructs the page, the DOM will look something like this.
+                  				
+                  				<pre class="visible">
+html
+  |-head
+  | |-title
+  | | |-"The World Cup is over"
+  | |-link
+  | | |-(rel="icon")
+  | | |-(type="image/x-icon")
+  | | |-(href="/images/favicon.ico")
+  |-body
+    |-div
+    |-(class="container")
+    |-h1
+    | |-(class="header")
+    | |-"The World Cup is, like, over"
+    |-p
+    | |-(style="color: #933;")
+    | |-"Now we have to watch baseball. Ugh."
+    |-p
+      |-(class="footnote")
+      |-"Just kidding! Baseball is totes exciting cuz they score lots."
+                  </pre>
+                  				
+                  				That is the DOM. You have element nodes, attribute nodes and text nodes. Technically, you could also have comment nodes, but let's stick with these three for now.
+				              	
+				              	</li>
+				              	<li>In the console. Open up a console window. When you look at you document structure (Elements tab in Chrome Inspector, HTML tab in Firefox), it looks like the HTML you would have written. But this series of collapsible HTML is a visual representation of the DOM.
+				              		<p class="exercise_box_details">
+				              			This is the interpreted DOM. As we'll see in the next section, we can use JavaScript to manipulate the DOM. The result of those manipulations will be different than the original HTML document. But the browser console will always reflect the current state of the DOM.
+				          			</p>
+				              	</li>
+				              </ol>
 				            </p>
 				            
 				          </div>
 				          
 				          <!--*****/////  Assignment Box 14  /////*****-->
 				          
-				          <div class="exercise_text" data-index="15" >
+				          <div class="exercise_text" data-index="14" >
 
-				            <h2> Info coming soon! </h2>
+				            <h2> The DOM API </h2>
 				            				            
 				            <p class="exercise_box_details">
-				              Place Holder
+				              Okay, great. We have the DOM. So what? The browser downloads your HTML, styles are applied, images and fonts loaded. Without a line of JavaScript, the DOM exists and a polished web page gets painted to my browser. What good is JavaScript?
+				            </p>
+				            
+				            <p class="exercise_box_details">
+				              <ol>
+				              	<li>
+				              	getElementById(). Change is good. The DOM API (an API is just a way for one program (e.g. ours) to talk to another (e.g. the browser)) lets us manipulate the page. Let's say we wanted to change the h1 element on a page. Before we can change the element, we have to select it. The easiest way is to select a node by its ID, since an ID can only appear once on a page. 
+				              	
+				              	Open this codepen: <a target="_blank" href="http://codepen.io/mccambridge/pen/fHKmn">http://codepen.io/mccambridge/pen/fHKmn</a>. In the JavaScript window on the right, enter the following code. The result will automatically re-run.
+				              	
+				              	<pre class="visible">
+var theHeader = document.getElementById('the-title');
+alert(theHeader);
+                  </pre>
+				              	getElementById() is a method on the document object. Notice the contents of the alert? It's an object. Every DOM element is an object. We'll learn what to do with that in a minute.
+
+				              	</li>
+				              	<li>
+				              	Accessing a Text Node Now that we have access to an element and remembering that text is a node in itself, how can we dive one level down into the text node?
+				              	
+				              	<pre class="visible">
+var theHeader = document.getElementById('the-title');
+alert(theHeader.innerHTML);
+                  </pre>
+                  				innerHTML is a property of our HTML node object. It is simply a record of the HTML inside of this node. In the current case, the only HTML left is simple text. Let's try changing it.
+                  				
+                  				<pre class="visible">
+var theHeader = document.getElementById('the-title');
+theHeader.innerHTML = 'Well, why don\'t you write your own header.';
+                  </pre>	
+				              	</li>
+				              	
+				              	<li>
+				              	Other Ways To Access a Node The browser gives us a few other methods to grab hold of our HTML elements. Let's start with document.getElementsByTagName(). Notice it's 'elements' (plural). This method returns an array. Try the following in the CodePen.
+				              	
+				              	<pre class="visible">
+var theHeader = document.getElementsByTagName('h1');
+alert(theHeader.length);
+                  </pre>
+                  				What happens if you add another h1 element? What if you want to manipulate the h1 elements? How would you accomplish that (remember looping around arrays from previous classes)? 
+                  				
+                  				The API also provides document.getElementsByClassName() which also returns an array but takes — you guessed it! — a class name as its parameter. 
+                  				
+                  				More recently, browser developers have included the document.querySelector() method, which takes a CSS selector, just like jQuery. Try this one in the CodePen:
+				              	</li>
+				              	
+				              	<li>
+				              	</li>
+				              	
+				              	<li>
+				              	</li>
+				              	
+				              	<li>
+				              	</li>
+				              </ol>
 				            </p>
 				            
 				          </div>
@@ -742,7 +964,7 @@ var (crashTheParty = function( hostess )) {(( console.log("I wasn't invited to "
 				          
 				          <div class="exercise_text" data-index="15" >
 
-				            <h2> Info coming soon! </h2>
+				            <h2> Deface Google </h2>
 				            				            
 				            <p class="exercise_box_details">
 				              Place Holder
@@ -754,7 +976,7 @@ var (crashTheParty = function( hostess )) {(( console.log("I wasn't invited to "
 				          
 				          <div class="exercise_text" data-index="16" >
 
-				            <h2> Info coming soon! </h2>
+				            <h2> Style and Classes </h2>
 				            				            
 				            <p class="exercise_box_details">
 				              Place Holder
@@ -766,7 +988,31 @@ var (crashTheParty = function( hostess )) {(( console.log("I wasn't invited to "
 				          
 				          <div class="exercise_text" data-index="17" >
 
-				            <h2> Info coming soon! </h2>
+				            <h2> Basic JS Animation </h2>
+				            				            
+				            <p class="exercise_box_details">
+				              Place Holder
+				            </p>
+				            
+				          </div>
+				          
+				          <!--*****/////  Assignment Box 18  /////*****-->
+				          
+				          <div class="exercise_text" data-index="18" >
+
+				            <h2> Events </h2>
+				            				            
+				            <p class="exercise_box_details">
+				              Place Holder
+				            </p>
+				            
+				          </div>
+				          
+				          <!--*****/////  Assignment Box 19  /////*****-->
+				          
+				          <div class="exercise_text" data-index="19" >
+
+				            <h2> Slideshow </h2>
 				            				            
 				            <p class="exercise_box_details">
 				              Place Holder
