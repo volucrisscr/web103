@@ -945,15 +945,52 @@ alert(theHeader.length);
                   				The API also provides document.getElementsByClassName() which also returns an array but takes — you guessed it! — a class name as its parameter. 
                   				
                   				More recently, browser developers have included the document.querySelector() method, which takes a CSS selector, just like jQuery. Try this one in the CodePen:
+                  				
+                  				<pre class="visible">
+var theHeader = document.querySelector('#the-title');
+theHeader.innerHTML = 'This works with id, class and tag name. It selects the first instance of a match.'
+                  </pre>
+                  				The API also provides document.querySelectorAll() which returns multiples. MDN does a good job documenting the API <a href="https://developer.mozilla.org/en-US/docs/Web/API/document.querySelectorAll">here</a>.
 				              	</li>
 				              	
 				              	<li>
+				              	Getting And Setting Attributes Aside from text, attributes are the other important side of HTML elements. Text populates our pages with content. Attributes give our elements options. Without attributes, img tags would be sourceless. Anchor tags would be href-less. What if we want to dive into selectors? Let's start with a fresh CodePen:
+				              	<a target="_blank" href="http://codepen.io/mccambridge/pen/IxGDq">http://codepen.io/mccambridge/pen/IxGDq</a>
+				              	
+				              	<pre class="visible">
+var theKitteh = document.querySelector('#awsum-kitteh-pic');
+alert(theKitteh.getAttribute('src'));
+                  </pre>
+                  
+                  				Using the node's getAttribute() method, we can check to see what the img src attribute is set to. What if we want to change it up?
+                  				
+                  				<pre class="visible">
+var theKitteh = document.querySelector('#awsum-kitteh-pic');
+theKitteh.setAttribute('src', 'http://placekitten.com/900/200');
+                  </pre>
+                  				
+                  				setAttribute() takes two parameters. The first selects which parameter on the element is getting reset. The second tells the browser what to set it to. Now, you can change any attribute on any element. Meow!
 				              	</li>
 				              	
 				              	<li>
+				              	createElement() & appendChild() More kitteh! With JavaScript, there are a few ways to add new nodes to your HTML document. Let's start with one more kitteh.
+				              	
+				              	<pre class="visible">
+// get the body tag then create a new img element for our new feline
+var bodyTag = document.getElementsByTagName('body')[0],
+    newKitteh = document.createElement('img');
+
+// our new kitteh needs some attributes
+newKitteh.setAttribute('src', 'http://placekitten.com/200/200');
+newKitteh.setAttribute('alt', 'teh new kittehhhhhh');
+
+// add it to the body tag at the end
+bodyTag.appendChild(newKitteh);
+                  </pre>
 				              	</li>
 				              	
 				              	<li>
+				              	Quick Exercise Let's make the cat image rotate, using the CSS I've already defined in the CodePen. Anything with the class 'rotating' will spin. Using what we've learned so far, how can you make the cat rotate?
 				              	</li>
 				              </ol>
 				            </p>
@@ -967,7 +1004,11 @@ alert(theHeader.length);
 				            <h2> Deface Google </h2>
 				            				            
 				            <p class="exercise_box_details">
-				              Place Holder
+				              Let's say you're late for work one day. Sure, you could make up and excuse and hope for the best. But what if you had some evidence to support your alibi? With your newfound JavaScript DOM manipulation skills, you could look up a page on Google, tweak it to work with your story and send your boss a screenshot of what "really" happened.
+				            </p>
+				            
+				            <p class="exercise_box_details">
+				              Yeah, we could poke around in the DOM inspector and let Firebug or Chrome Tools do the hard work. But we're proud JavaScript developers. Make up a story for why you were late to work and use the DOM manipulation methods we've learned to change the page to support your story.
 				            </p>
 				            
 				          </div>
@@ -979,8 +1020,131 @@ alert(theHeader.length);
 				            <h2> Style and Classes </h2>
 				            				            
 				            <p class="exercise_box_details">
-				              Place Holder
+				              Manipulating styles and classes allows you to change the UI dynamically.
 				            </p>
+				            
+				            <p class="exercise_box_details">
+				              <ol>
+				              	<li>Changing styles with JavaScript. Every node in the DOM has a style object associated with it. You can get and set styles by accessing the style you want to change via node.style.styleName. Where CSS uses hyphenated syntax for style names, its JS counterpart uses camelCase.
+				              		
+				              		Let's head back over to our CodePen: <a href="http://codepen.io/mccambridge/pen/IxGDq">http://codepen.io/mccambridge/pen/IxGDq</a>. Let's take the square 200px x 200px cat image and make it a circle using the CSS border-radius property.
+				              		
+				              		<pre class="visible">
+newKitteh = document.createElement('img');
+newKitteh.src = 'http://placekitten.com/200/200';
+document.getElementsByTagName('body')[0].appendChild(newKitteh);
+
+newKitteh.style.borderRadius = '50%';
+                  </pre>
+				              	</li>
+				              	
+				              	<li>
+				              	Getting styles via JavaScript. The styles object is exactly that. You can get all of the styles for a particular node to see what has been set.
+				              	
+				              	<pre class="visible">
+newKitteh = document.createElement('img');
+newKitteh.src = 'http://placekitten.com/200/200';
+document.getElementsByTagName('body')[0].appendChild(newKitteh);
+
+newKitteh.style.borderRadius = '50%';
+
+var kittehStyles = newKitteh.style;
+console.dir(kittehStyles);
+                  </pre>
+                  
+                  				Notice, it's an object with most of its properties empty. The numerical array-like entries are for the border-radius we just set, which is simply shorthand for each of the corners of the node.
+                  				
+                  				You can also access each style individually.
+                  				
+                  				<pre class="visible">
+newKitteh = document.createElement('img');
+newKitteh.src = 'http://placekitten.com/200/200';
+document.getElementsByTagName('body')[0].appendChild(newKitteh);
+
+newKitteh.style.borderRadius = '50%';
+
+var kittehBorderRadius = newKitteh.style.borderRadius;
+alert(kittehBorderRadius);
+                  </pre>
+				              	</li>
+				              	
+				              	<li>
+				              	Getting an element's classes. Classes are powerful tools in HTML and CSS. Being able to manipulate them in JS is quite useful. You might have an 'active' class or a 'disabled' class that you need to toggle on and off to indicate an element's state in your app. First, we'll create a bunch of kittehs with a class name equal to kitteh-[num] where num is the loop increment in which it was created.
+				              	
+				              	<pre class="visible">
+var urlBase = 'http://placekitten.com/',
+    bodyTag = document.getElementsByTagName('body')[0];
+
+for (var i = 1; i < 9; i++) {
+  createKitteh(i);
+}
+
+function createKitteh(num) {
+  var kitteh = document.createElement('img');
+  kitteh.setAttribute('src', urlBase + num + '00/200');
+  kitteh.className += 'kitteh kitteh-' + num;
+  bodyTag.appendChild(kitteh);
+}
+                  </pre>
+                  
+                  				node.className is a handy way for us to access the class list of an element. Since one element can have many classes (separated by spaces in your HTML), JS is smart enough to know that += means add to the class list. We're setting two classes to our new elements. But if we had accessed an existing element that already had classes, the += operator would ensure that we're merely adding classses to the element.
+                  				
+                  				Now let's get the class of an element and modify the element based on that class.
+                  				
+                  				<pre class="visible">
+var urlBase = 'http://placekitten.com/',
+    bodyTag = document.getElementsByTagName('body')[0],
+    kittehClasses = [],
+    disabled,
+    newKittehClasses = '';
+
+// create sum kittehs
+for (var i = 1; i < 9; i++) {
+  createKitteh(i);
+}
+
+var theKittehs = document.getElementsByClassName('kitteh');
+
+// disable kittehs divisible by three
+for (var i = 0; i < theKittehs.length; i++) {
+  if (i % 3 === 1) {
+    theKittehs[i].className += ' disabled';
+  }
+}
+
+//handleDisabledKittehs();
+
+function createKitteh(num) {
+  var kitteh = document.createElement('img');
+  kitteh.setAttribute('src', urlBase + num + '00/200');
+  kitteh.className += ' kitteh kitteh-' + num;
+  bodyTag.appendChild(kitteh);
+}
+
+function handleDisabledKittehs() {
+  for (var i = 0; i < theKittehs.length; i++) {
+    kittehClasses = theKittehs[i].className.split(' '); // convert space-separated string to array of classes
+    
+    // loop through classes
+    for (var j = 0; j < kittehClasses.length; j++) {
+      if (kittehClasses[j] === 'disabled') {
+      disabled = true;
+      }
+    }
+    if (disabled) {
+      theKittehs[i].className += ' disabledBorder';
+    } 
+    kittehClasses = [];
+    disabled = false;
+  }
+}
+                  </pre>
+                  				This is an absolutely convoluted example. But hopefully, you can see how we can loop through elements and check their classes. But you an also see how difficult it is to something as simple as check which classes belong to an element. jQuery made this process infinitely easier. And more complex processes, like traversing the DOM, were also made MUCH easier. If we have time, we'll look a bit at what jQuery can do.
+				              	</li>
+				              </ol>
+				            </p>
+				            
+				            
 				            
 				          </div>
 				          
@@ -991,7 +1155,40 @@ alert(theHeader.length);
 				            <h2> Basic JS Animation </h2>
 				            				            
 				            <p class="exercise_box_details">
-				              Place Holder
+				              What is animation? On the screen, it's movement of some element over time. Basic animation is rather simple. In this exercise, we'll be applying a background image to a div and change the background's x (left/horizontal) position over time. You'll be introduced to the setTimeout function which repeatedly calls a function after a specified delay. Each time we run the function with setTimeout, we'll pull the background image position slightly to the left. It'll happen so quickly, it will look like animation.
+				            </p>
+				            
+				            <p class="exercise_box_details">
+				              <ol>
+				              	<li>Time for a fresh CodePen: <a href="http://codepen.io/pen/">http://codepen.io/pen/</a>.
+				              		
+				              		<pre class="visible">
+// set cloud properties
+var cloud = document.querySelector('#cloud');
+cloud.style.backgroundImage = "url('http://1-background.com/images/clouds/white-clouds-blue-sky-seamless-background-tile.jpg')";
+cloud.style.backgroundPositionX = 0;
+cloud.style.backgroundPositionY = 0;
+cloud.style.width = '100%';
+cloud.style.height = '314px';
+
+var animateCloud = function(speed) {
+  var speed = speed || 2; // this is shorthand for: if speed is set use it. otherwise, use the second value.
+  var currentOffset = parseInt(cloud.style.backgroundPositionX, 10); // parseInt will shave off the px part of the value
+  cloud.style.backgroundPositionX = (currentOffset - speed) + 'px'; // subtract our speed from the current position
+  
+  // every time animateCloud runs, we wait 35ms and run it again
+  setTimeout(animateCloud, 35, speed);
+
+  // setTimeout takes a function to be called (notice we're not calling it with () )
+  // the second parameter is how soon to call it in ms (1000ms in a second)
+  // each additional parameter are the parameters to send to the function we're calling
+}
+
+//animateCloud();
+                  </pre>
+				              	</li>
+				              	<li>See what other modifications you could make to this script to animate the scene differently.</li>
+				              </ol>
 				            </p>
 				            
 				          </div>
@@ -1000,10 +1197,46 @@ alert(theHeader.length);
 				          
 				          <div class="exercise_text" data-index="18" >
 
-				            <h2> Events </h2>
+				            <h2> JavaScript Events </h2>
 				            				            
 				            <p class="exercise_box_details">
-				              Place Holder
+				              Events are generally triggers for some behavior to occur. This could be a mouse click on an element, the page itself loading, an image loading, the user entering a form field, a keystroke, etc. When an event occurs, the browser fires an event handler function that executes a piece of code. Let's dive in starting with our cloud animation.
+				            </p>
+				            
+				            <p class="exercise_box_details">
+				              <ol>
+				              	<li>So now we're simply going to create a function we want the event to call, and we're going to wire up the event itself. Events are incredibly powerful. You can probably see where we're going with this.
+				              		 <pre class="visible">
+// set cloud properties
+var cloud = document.querySelector('#cloud');
+cloud.style.backgroundImage = "url('http://1-background.com/images/clouds/white-clouds-blue-sky-seamless-background-tile.jpg')";
+cloud.style.backgroundPositionX = 0;
+cloud.style.backgroundPositionY = 0;
+cloud.style.width = '100%';
+cloud.style.height = '314px';
+
+var animateCloud = function(speed) {
+  var speed = speed || 2;
+  
+  var currentOffset = parseInt(cloud.style.backgroundPositionX, 10);  
+  cloud.style.backgroundPositionX = (currentOffset - speed) + 'px';
+  
+  setTimeout(animateCloud, 35, speed);
+}
+
+var handleClickYo = function() {
+  btn.style.display = 'none';
+  cloud.style.display = 'block';
+  animateCloud(1);
+}
+
+// set up the event
+var btn = document.getElementById('cloudControl');
+//btn.addEventListener('click', handleClickYo);
+                  </pre>
+				              	</li>
+				              	<li>There is a whole list of events over at MDN: <a href="https://developer.mozilla.org/en-US/docs/Web/Events">https://developer.mozilla.org/en-US/docs/Web/Events</a>. Be careful, not all of them are supported in every browser. (Always remember to make sure the code you write is supported by modern browsers.) ;)</li>
+				              </ol>
 				            </p>
 				            
 				          </div>
@@ -1015,7 +1248,33 @@ alert(theHeader.length);
 				            <h2> Slideshow </h2>
 				            				            
 				            <p class="exercise_box_details">
-				              Place Holder
+				              We might not have time to work this out in class. If you're having fun with this — and I'm sure you are ‐ then finish it at home. Let's build a slideshow of images. Let's keep it simple. We want three images of the same width and height to animate when you click on some previous and next buttons.
+				            </p>
+				            
+				            <p class="exercise_box_details">
+				              What are the components of a slideshow, or carousel? We already listed some. We need images. We need buttons or links to which we wire up events. We need an outer container that will hide everything but the current image. We need an inner container that will be wide enough for our images to sit side-by-side-by-side.
+				            </p>
+				            
+				            <p class="exercise_box_details">
+				              In the JavaScript, we need an animation function that sends the images left and right. We need to track where we are in the slideshow. We need events to call the animation function and tell the slide tracker what's going on. Finally, we need to handle shuffling the slides so that one slide is always to the left and right of the current slide.
+				            </p>
+				            
+				            <p class="exercise_box_details">
+				              It's probably also a good idea to only allow one click to be processed until the current cycle finishes running. How do we wire this all together?
+				            </p>
+				            
+				          </div>
+				          
+				          <!--*****/////  Assignment Box 20  /////*****-->
+				          
+				          <div class="exercise_text" data-index="20" >
+
+				            <h2> With Great Power Comes Great Responsibility </h2>
+				            				            
+				            <p class="exercise_box_details">
+				              It's time to take everything we've learned in the class this far and build one big awesome project with it!
+				              You're going to be building a whole bunch of functions today.
+				              Go ahead and download today's course materials <a href="assignments/Day4.zip">HERE</a>. All the necessary instructions are included in the scripts.js file inside it!
 				            </p>
 				            
 				          </div>
