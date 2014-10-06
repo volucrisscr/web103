@@ -174,11 +174,11 @@
 				            
 				            <p class="exercise_box_details">
 				              <ol>
-				              	<li>Right click anywhere on the page and click 'inspect element'. Then click the console tab. (insert explanation of devtools here)</li>
-				              	<li>There are a handful of variable types in JavaScript (insert explanation of variables here). Let's start with numbers. Type some numbers in your JS console.</li>
-				              	<li>We can also do math in our console! Let's try some basic math. Add 2 numbers together. <pre>2 + 7</pre></li>
-				              	<li>We can get into the negatives as well. Create a negative math equation. <pre>2 * 7 - 100</pre><</li>
-				              	<li>Decimals also work (kinda). Do some arithmetic with decimals. <pre>.5 * .5</pre><pre>.83 + .17</pre><pre>.999 - 3.212</pre></li>
+				              	<li>Right click anywhere on the page and click 'inspect element'. Then click the console tab. (insert explanation of devtools here)</li><br>
+				              	<li>There are a handful of variable types in JavaScript (insert explanation of variables here). Let's start with numbers. Type some numbers in your JS console.</li><br>
+				              	<li>We can also do math in our console! Let's try some basic math. Add 2 numbers together. <pre>2 + 7</pre></li><br>
+				              	<li>We can get into the negatives as well. Create a negative math equation. <pre>2 * 7 - 100</pre></li><br>
+				              	<li>Decimals also work (kinda). Do some arithmetic with decimals. <pre>.5 * .5</pre><pre>.83 + .17</pre><pre>.999 - 3.212</pre></li><br>
 				              	<li>What about decimal subtraction? <pre>2 - .3</pre><pre>.86 - .177</pre><pre>.3 - .2</pre>
 				              		<p>What happened on that last one?</p>
 				              		<p>Like in other programming languages, decimals are floating point numbers, meaning the arithmetic can get sticky. Don't always trust your math to be correct! Always check it!</p>
@@ -200,8 +200,8 @@
 				            
 				            <p class="exercise_box_details">
 				              <ol>
-				              	<li>Another type of variable in JavaScript are strings. (insert explanation of strings here). Create a string out of your name! <pre>"Josh Soileau"</pre></li>
-				              	<li>Guess, what? Strings can be added together too! Create two different strings and add them together. <pre>"My name is " + "Josh Soileau"</pre></li>
+				              	<li>Another type of variable in JavaScript are strings. (insert explanation of strings here). Create a string out of your name! <pre>"Josh Soileau"</pre></li><br>
+				              	<li>Guess, what? Strings can be added together too! Create two different strings and add them together. <pre>"My name is " + "Josh Soileau"</pre></li><br>
 				              	<li>But we get into weird stuff when we add two different TYPES of things together. Add a number and a string together. <pre>"My Name Is " + 42</pre><pre>2 + "2"</pre><pre>"86" + 7 + 5 + "3" + 0 + "9"</pre>
 				              		<p>How does this work?</p>
 				              	</li>
@@ -250,10 +250,10 @@
 				              		<pre class="visible">if( SOME CONDITION TO CHECK ) { <br/>    CODE TO RUN IF CONDITION PASSES <br>} </pre>
 				              		<p>Here's an example: </p>
 				              		<pre class="visible">var oldLadyIsSinging = 1;<br/><br/>if( oldLadyIsSinging ) {<br/>    var itIsOver = 1;<br/>}</pre>
-				              	</li>
+				              	</li><br>
 				              	<li>What if we only want something to happen if the 'if' condition fails? 'Else' statements!
 				              		<pre class="visible">var oldLadyIsSinging = 1;<br/><br/>if( oldLadyIsSinging ) {<br/>    var itIsOver = 1;<br/>} else {<br/>    var itIsOver = 0;<br/>}</pre>
-				              	</li>
+				              	</li><br>
 				              	<li>We've secretly just introduced a NEW data type, BOOLEANS! Booleans are a data type that can only ever have 1 of 2 different values, true or false. Booleans are used in 'if' statements and loops. Here's a few examples of Booleans:
 				              		
 				              		<pre class="visible">true</pre>
@@ -264,8 +264,8 @@
 				              			<pre>var myNameString = "My name is Josh Soileau";<br/>myNameString === "My name is Josh Soileau"</pre>
 				              			<pre>var myNameString = 123456;<br/>myNameString === "My name is Josh Soileau"</pre>
 				              		</p>
-				              	</li>
-				              	<li>All of these examples of booleans can be used inside an if statement as the condition to check!</li>
+				              	</li><br>
+				              	<li>All of these examples of booleans can be used inside an if statement as the condition to check!</li><br>
 				              	<li>PROMPT exercise. To be explained in class!</li>
 				              </ol>
 				            </p>
@@ -286,28 +286,28 @@
 				              <ol>
 				              	<li>Arrays are defined by square brackets []. When the compiler sees those square brackets, it knows to expect an array of items inside the brackets.
 				              		<pre class="visible">[ ARRAY ITEMS GO IN HERE ]</pre>
-				              	</li>
+				              	</li><br>
 				              	<li>The items inside the brackets are all separated by commas, to signify the dividers to the compiler.
 				              		<pre class="visible">[ arrayItem, anotherArrayItem, yetAnotherArrayItem ]</pre>
 				              		In the above case we have an array of size 3.
-				              	</li>
+				              	</li><br>
 				              	<li>Create an array of strings. Make it have at least 4 items in it, and make each item be your favorite topping on a pizza. Save that array to a variable.
 				              		<pre>var pizzaTopings = [ "Cheese", "Pepperoni", "Green Peppers", "Red Peppers", "Mushrooms" ];</pre>
-				              	</li>
-				              	<li>Okay, so we now have an array with values in it. How do we get those values later? We can access arrays using INDEXES</li>
+				              	</li><br>
+				              	<li>Okay, so we now have an array with values in it. How do we get those values later? We can access arrays using INDEXES</li><br>
 				              	<li>What are indexes? They are slots in the array! But the secret is that the first slot of the array is index "0" (like all things comp sci) (insert explanation of starting at 0 and not 1). 
 Think of it this way:
 									<pre class="visible">[ "Cheese", "Pepperoni", "Green Peppers", "Red Peppers", "Mushrooms" ]<br/><br/>   Index 0    Index 1        Index 2         Index 3        Index 4</pre>
-								</li>
+								</li><br>
 								<li>So the way we access indexes of the array are by using indexes in the array. Here's the syntax:
 									<pre class="visible">var pizzaTopings = [ "Cheese", "Pepperoni", "Green Peppers", "Red Peppers", "Mushrooms" ];<br/>pizzaToppings[ NUMBER OF INDEX I WANT TO ACCESS ]</pre>
-								</li>
+								</li><br>
 								<li>To get the first index of the array we would use the 0th index.
 									<pre class="visible">var pizzaTopings = [ "Cheese", "Pepperoni", "Green Peppers", "Red Peppers", "Mushrooms" ];<br>pizzaToppings[0];</pre>
-								</li>
+								</li><br>
 								<li>To get the third index of the array we would use the 2nd index.
 									<pre class="visible">var pizzaTopings = [ "Cheese", "Pepperoni", "Green Peppers", "Red Peppers", "Mushrooms" ];<br>pizzaToppings[2];</pre>
-								</li>
+								</li><br>
 								<li>How do we get the last item in the array? In this case we know it's the 4th index.
 									<pre class="visible">var pizzaTopings = [ "Cheese", "Pepperoni", "Green Peppers", "Red Peppers", "Mushrooms" ];<br>pizzaToppings[4];</pre>
 									But what if we didn't know how long our array was? What if somebody inserts a 6th item in the array without us knowing?
@@ -317,7 +317,7 @@ Think of it this way:
 									<pre class="visible">var pizzaTopings = [ "Cheese", "Pepperoni", "Green Peppers", "Red Peppers", "Mushrooms" ];<br/>pizzaToppings.length</pre>
 									Notice how it returns the number "5". But our last index is index #4! So to get the last element in the array, we could do this:
 									<pre class="visible">var pizzaTopings = [ "Cheese", "Pepperoni", "Green Peppers", "Red Peppers", "Mushrooms" ];<br/><br/>pizzaToppings[ pizzaToppings.length - 1 ];</pre>
-								</li>
+								</li><br>
 								<li>It's important to note that arrays don't have to hold just 1 type of data. You can have an array of anything!
 									<pre class="visible">[ "Cheese", 42, 999 ]<br>[ "Rocky", true, false, "Bullwinkle" ]</pre>
 									You can even have an array of arrays!
@@ -342,23 +342,23 @@ Think of it this way:
 				              <ol>
 				              	<li>For loops are similar to if statements. You have some parenthesis and some curly braces. The code inside the curly braces is the code that runs during the loop. Here's the syntax:
 				              	<pre class="visible">for( BEFORE CODE ; WHILE CONDITION ; AFTER CODE ) {<br/>    CODE TO BE RUN DURING LOOP <br/>}<br/><br/>BEFORE CODE: this is set at the beginning of the loop<br>It is usually something like var i=0 or something like that<br/><br/>WHILE CONDITION: the condition to keep running the loop<br/><br/>AFTER CODE: this runs after every iteration of the loop</pre>
-				              	</li>
+				              	</li><br>
 				              	<li>
 				              	Here's a simple example of for loops:
 				              	<pre class="visible">var i;<br>var concatNumbersVar = "";<br>for( i=0; i<6; i++) {<br>    concatNumbersVar = concatNumbersVar + i;<br>}</pre>
 				              	At the top, we create two variables, one isn't defined yet (i), the other is an empty string. The loop starts at i = 0, and loops through as long as i < 6, but increasing i by 1 every time the loop finishes.
 				              	The code inside the loop takes our empty string, and appends a number on the back of it every time the loop happens (remember what happens when you add a string and a number together?)
-				              	</li>
+				              	</li><br>
 				              	<li> Exercise time!
 				              		<ol>
-				              			<li>Think about all the mechanical parts of an airplane. Create an array (at least length 6) containing all the parts of a plane that you think it needs to fly, and save that array to a variable.</li>
+				              			<li>Think about all the mechanical parts of an airplane. Create an array (at least length 6) containing all the parts of a plane that you think it needs to fly, and save that array to a variable.</li><br>
 				              			<li>Using a For loop iterate through this array, and use the "alert()" function to pop up and say each part of the plane.</li>
 				             		</ol>
-				              	</li>
+				              	</li><br>
 				              	<li> Extended exercise.
 				              		<ol>
-				              			<li>Instead of creating an array and then iterating through it like we just did, we are going to build our array in a for loop. Create an empty array called "airplaneParts"</li>
-				              			<li>Create a for loop that loops 6 times, and inside of it, use "prompt()" to ask the user to state a piece of an airplane. Save that value and "push" that value to your "airplaneParts" array.</li>
+				              			<li>Instead of creating an array and then iterating through it like we just did, we are going to build our array in a for loop. Create an empty array called "airplaneParts"</li><br>
+				              			<li>Create a for loop that loops 6 times, and inside of it, use "prompt()" to ask the user to state a piece of an airplane. Save that value and "push" that value to your "airplaneParts" array.</li><br>
 				              			<li>After the array is finished (outside the loop), use "alert" to pop up and list all the parts that the user put in in the previous steps.</li>
 				              		</ol>
 				              	</li>
@@ -385,7 +385,7 @@ console.log('Hello, ' + userName);
 console.log('It's nice to see you today.');
 console.log('Looks like you've got a lot on your plate today.')
 console.log('Better get to work!');</pre>
-				              	</li>
+				              	</li><br>
 				              	<li>But if you had different userNames, you'd have to do all 5 lines over and over again for every user. Or, we could just use a function! Here's the function syntax:
 				              	<pre class="visible">
 var myFunctionName = function( PARAMETER TO GIVE THE FUNCTION ) {
@@ -412,7 +412,7 @@ var greetTheUser = function( userName ) {
 								<pre class="visible">
 greetTheUser( "Josh Soileau" );
                   </pre>
-				              	</li>
+				              	</li><br>
 				              	<li>
 				              	So what is the thing inside of our call to greetTheUser()?
 								That is our "parameter".
@@ -436,7 +436,7 @@ greetTheUser( 12.34 );
 greetTheUser( "HAL" );
                   </pre>
 								As you can see, it treats it the same way! It saves whatever it is being passed into this 'userName' variable, and tries to use it as well as it can.
-				              	</li>
+				              	</li><br>
 				              	<li>
 				              	Functions can also return values that we can save for later. See this example:
 				              	<pre class="visible">
@@ -474,7 +474,7 @@ var greetTheUser = function( userName ) {
   console.log('Better get to work!');
 };
                   </pre>
-				            	</li>
+				            	</li><br>
 				            	<li>Inside this function we make a variable called "userName". What happens if we try and access that variable somewhere else, like this:
 				            	 <pre class="visible">
 var greetTheUser = function( userName ) {
@@ -488,13 +488,13 @@ console.log( userName );
                   </pre>
 				            	What do we get there and why?
 								In JavaScript, variables (and functions) are only available in the context they are defined in.
-				            	</li>
+				            	</li><br>
 				            	<li>
 				            	Think of scoping like each bit of code is a small piece of a neighborhood.
 								Each "function" is a fenced in property. Anything on the inside, stays in the inside.
 								In our example above, the "userName" variable is created inside our fenced in yard.
 								But then we try and use that variable OUTSIDE of the fence, and it doesn't work. That is because OUTSIDE of the fence, we don't know what "userName" is, it is undefined!
-				            	</li>
+				            	</li><br>
 				            	<li>The same thing will happen here as well:
 				            	<pre class="visible">
 var prepareForUser = function( userName ) {
@@ -511,7 +511,7 @@ console.log( greetingString );
 console.log( "Your age is " + userAge );
 console.log( "Your favorite color is " + userFavoriteColor );
                   </pre>
-				            	</li>
+				            	</li><br>
 				            	<li>
 				            	So how do we fix that code above??
 								Remember how our code is kind of like a neighborhood with fences in it?
@@ -556,7 +556,7 @@ console.log( "Your favorite color is " + userFavoriteColor );
                   </pre>
 								All we had to do is DECLARE our variables globally. We didn't even need to assign them any value.
 								Just the act of declaring them outside the function meant that we could access them outside the function later on.
-				            	</li>
+				            	</li><br>
 				            	<li>Now we know that we can make variables GLOBAL and have access to them everywhere. So why don't we do this for everything??
 				            	Take a look at this code below, tell me what the output is:
 				            	<pre class="visible">
@@ -573,7 +573,7 @@ var popOneBalloon = function( balloonsColor ) {
 console.log( numberOfBalloons + " " +  balloonsColor + " balloons go by." );
                   </pre>
 				            	What is the output of that code and why? (move the console.log around to learn more)
-				            	</li>
+				            	</li><br>
 				            	<li>This type of thing is why it's a bad idea to have too many global variables. By saying that YOUR variable is global, you are effectively preventing other coders from using that variable name in different scopes. If you can, try and do without global variables.</li>
 				            </ol>
 				            
@@ -618,7 +618,7 @@ var demandFood( snackFood ) {
 
 demandFood("Grapes from a Vine");
                   </pre>
-					                </li>
+					                </li><br>
 					                <li>
 					                 <pre class="visible">
 var thankHostess = function{ action } (
@@ -627,8 +627,7 @@ var thankHostess = function{ action } (
 
 thankHostess("feeding me Grapes from a Vine");
                   </pre>
-					                </li>
-					
+					                </li><br>
 					                <li>
 					                  <pre class="visible">
 function var = inviteToDinner( person ) {
@@ -639,8 +638,7 @@ function var = inviteToDinner( person ) {
 
 inviteToDinner( "Nagging Steve" );
                   </pre>
-					                </li>
-					
+					                </li><br>
 					                <li>
 					                  <pre class="visible">
 var (crashTheParty = function( hostess )) {(( console.log("I wasn't invited to " + hostess + "'s party, but I'm coming anyway"); )))}
@@ -676,16 +674,16 @@ var (crashTheParty = function( hostess )) {(( console.log("I wasn't invited to "
 				              <ol>
 				              	<li>First, create global variables for userName, userAddress, accountNumber, accountOpenDate, and accountBalance.
 									For now, these variables will be strings and numbers. We may change that later on to account for multiple account holders if we have time.
-									Declare your variables at the TOP of your file.</li>
+									Declare your variables at the TOP of your file.</li><br>
 				              	<li>First thing's first. Create a function called printAccountInfo that will print the information for this user's account using console.log.
-									It may be helpful, as well, to create a printBalance function that will ONLY print the balance and not the rest of the info.</li>
+									It may be helpful, as well, to create a printBalance function that will ONLY print the balance and not the rest of the info.</li><br>
 				              	<li>After we have the our printAccountInfo function, we need functions to manage our balance.
-									First, we will need a setBalance function, which will do exactly that, set the accountBalance variable to some number that is passed as a parameter to the setBalance function.</li>
-				              	<li>Next we will need withdraw() and deposit() functions, which will accept a parameter, and use the setBalance function to either add or remove that parameter from the accountBalance function.</li>
-				              	<li>Our customers may also want to change their address. Let's create a setAddress function that will accept a string as a parameter, and set the address variable to that string.</li>
+									First, we will need a setBalance function, which will do exactly that, set the accountBalance variable to some number that is passed as a parameter to the setBalance function.</li><br>
+				              	<li>Next we will need withdraw() and deposit() functions, which will accept a parameter, and use the setBalance function to either add or remove that parameter from the accountBalance function.</li><br>
+				              	<li>Our customers may also want to change their address. Let's create a setAddress function that will accept a string as a parameter, and set the address variable to that string.</li><br>
 				              	<li>Let's say we are the most kick ass bank in the world, and we are giving awesome interest rates on savings accounts.
 									Let's say we give a 3% interest rate, and we give it EVERY SINGLE DAY.
-									Make a new function called giveInterest which will increase the balance by 3%.</li>
+									Make a new function called giveInterest which will increase the balance by 3%.</li><br>
 				              	<li>One of the selling points of our bank is this awesome interest rate. Sometimes we get requests from our customers to tell them what their balance will be after 10 years in the future, at 3% interest, accrued daily.
 				              		
 				              		Write a function called predictBalance that will accept 1 parameter, the # of years the want to predict, and will return the balance in the account after that amount of time.
@@ -693,7 +691,7 @@ var (crashTheParty = function( hostess )) {(( console.log("I wasn't invited to "
 				              		Important note: this function DOES NOT CHANGE the balance, it just predicts what the balance will be after X number of years at 3% interest.
 				              		
 				              		Another important note: this can be accomplished a few different ways (like everything in programming). It can be done with for loops, while loops, you can even do it with recursive functions if you want to get elegant.
-				              	</li>
+				              	</li><br>
 				              	<li>If time is left over at this point, change our variable types to ARRAYS, and modify all the functions to be able to handle multiple account holders.</li>
 				              </ol>
 				            </p>
@@ -881,7 +879,7 @@ html
                   				
                   				That is the DOM. You have element nodes, attribute nodes and text nodes. Technically, you could also have comment nodes, but let's stick with these three for now.
 				              	
-				              	</li>
+				              	</li><br>
 				              	<li>In the console. Open up a console window. When you look at you document structure (Elements tab in Chrome Inspector, HTML tab in Firefox), it looks like the HTML you would have written. But this series of collapsible HTML is a visual representation of the DOM.
 				              		<p class="exercise_box_details">
 				              			This is the interpreted DOM. As we'll see in the next section, we can use JavaScript to manipulate the DOM. The result of those manipulations will be different than the original HTML document. But the browser console will always reflect the current state of the DOM.
@@ -915,7 +913,7 @@ alert(theHeader);
                   </pre>
 				              	getElementById() is a method on the document object. Notice the contents of the alert? It's an object. Every DOM element is an object. We'll learn what to do with that in a minute.
 
-				              	</li>
+				              	</li><br>
 				              	<li>
 				              	Accessing a Text Node Now that we have access to an element and remembering that text is a node in itself, how can we dive one level down into the text node?
 				              	
@@ -929,7 +927,7 @@ alert(theHeader.innerHTML);
 var theHeader = document.getElementById('the-title');
 theHeader.innerHTML = 'Well, why don\'t you write your own header.';
                   </pre>	
-				              	</li>
+				              	</li><br>
 				              	
 				              	<li>
 				              	Other Ways To Access a Node The browser gives us a few other methods to grab hold of our HTML elements. Let's start with document.getElementsByTagName(). Notice it's 'elements' (plural). This method returns an array. Try the following in the CodePen.
@@ -949,7 +947,7 @@ var theHeader = document.querySelector('#the-title');
 theHeader.innerHTML = 'This works with id, class and tag name. It selects the first instance of a match.'
                   </pre>
                   				The API also provides document.querySelectorAll() which returns multiples. MDN does a good job documenting the API <a href="https://developer.mozilla.org/en-US/docs/Web/API/document.querySelectorAll">here</a>.
-				              	</li>
+				              	</li><br>
 				              	
 				              	<li>
 				              	Getting And Setting Attributes Aside from text, attributes are the other important side of HTML elements. Text populates our pages with content. Attributes give our elements options. Without attributes, img tags would be sourceless. Anchor tags would be href-less. What if we want to dive into selectors? Let's start with a fresh CodePen:
@@ -968,7 +966,7 @@ theKitteh.setAttribute('src', 'http://placekitten.com/900/200');
                   </pre>
                   				
                   				setAttribute() takes two parameters. The first selects which parameter on the element is getting reset. The second tells the browser what to set it to. Now, you can change any attribute on any element. Meow!
-				              	</li>
+				              	</li><br>
 				              	
 				              	<li>
 				              	createElement() & appendChild() More kitteh! With JavaScript, there are a few ways to add new nodes to your HTML document. Let's start with one more kitteh.
@@ -985,7 +983,7 @@ newKitteh.setAttribute('alt', 'teh new kittehhhhhh');
 // add it to the body tag at the end
 bodyTag.appendChild(newKitteh);
                   </pre>
-				              	</li>
+				              	</li><br>
 				              	
 				              	<li>
 				              	Quick Exercise Let's make the cat image rotate, using the CSS I've already defined in the CodePen. Anything with the class 'rotating' will spin. Using what we've learned so far, how can you make the cat rotate?
@@ -1034,8 +1032,7 @@ document.getElementsByTagName('body')[0].appendChild(newKitteh);
 
 newKitteh.style.borderRadius = '50%';
                   </pre>
-				              	</li>
-				              	
+				              	</li><br>
 				              	<li>
 				              	Getting styles via JavaScript. The styles object is exactly that. You can get all of the styles for a particular node to see what has been set.
 				              	
@@ -1064,8 +1061,7 @@ newKitteh.style.borderRadius = '50%';
 var kittehBorderRadius = newKitteh.style.borderRadius;
 alert(kittehBorderRadius);
                   </pre>
-				              	</li>
-				              	
+				              	</li><br>
 				              	<li>
 				              	Getting an element's classes. Classes are powerful tools in HTML and CSS. Being able to manipulate them in JS is quite useful. You might have an 'active' class or a 'disabled' class that you need to toggle on and off to indicate an element's state in your app. First, we'll create a bunch of kittehs with a class name equal to kitteh-[num] where num is the loop increment in which it was created.
 				              	
@@ -1184,7 +1180,7 @@ var animateCloud = function(speed) {
 
 //animateCloud();
                   </pre>
-				              	</li>
+				              	</li><br>
 				              	<li>See what other modifications you could make to this script to animate the scene differently.</li>
 				              </ol>
 				            </p>
@@ -1232,7 +1228,7 @@ var handleClickYo = function() {
 var btn = document.getElementById('cloudControl');
 //btn.addEventListener('click', handleClickYo);
                   </pre>
-				              	</li>
+				              	</li><br>
 				              	<li>There is a whole list of events over at MDN: <a href="https://developer.mozilla.org/en-US/docs/Web/Events">https://developer.mozilla.org/en-US/docs/Web/Events</a>. Be careful, not all of them are supported in every browser. (Always remember to make sure the code you write is supported by modern browsers.) ;)</li>
 				              </ol>
 				            </p>

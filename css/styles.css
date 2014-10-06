@@ -203,9 +203,13 @@ ul.exercise-list{
 
 li.exercise:hover{
 	color: rgb(39,77,138);
+	cursor: pointer;
 }
 
-
+/* make active link blue
+li.exercise:active{
+	color: blue;
+} */
 
 li.assignment{
     font-style: italic;
