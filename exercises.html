@@ -835,7 +835,7 @@ window.
 				            
 				            <p class="exercise_box_details">
 				              <ol>
-				              	<li>A Simple Page. Consider the following HTML.
+				              	<li><font color="blue"></>A Simple Page. </font>Consider the following HTML.
 				              	
 				              	<pre class="visible">
 &lt;html&gt;
@@ -880,7 +880,7 @@ html
                   				That is the DOM. You have element nodes, attribute nodes and text nodes. Technically, you could also have comment nodes, but let's stick with these three for now.
 				              	
 				              	</li><br>
-				              	<li>In the console. Open up a console window. When you look at you document structure (Elements tab in Chrome Inspector, HTML tab in Firefox), it looks like the HTML you would have written. But this series of collapsible HTML is a visual representation of the DOM.
+				              	<li><font color="blue">In the console. </font>Open up a console window. When you look at you document structure (Elements tab in Chrome Inspector, HTML tab in Firefox), it looks like the HTML you would have written. But this series of collapsible HTML is a visual representation of the DOM.
 				              		<p class="exercise_box_details">
 				              			This is the interpreted DOM. As we'll see in the next section, we can use JavaScript to manipulate the DOM. The result of those manipulations will be different than the original HTML document. But the browser console will always reflect the current state of the DOM.
 				          			</p>
@@ -903,7 +903,7 @@ html
 				            <p class="exercise_box_details">
 				              <ol>
 				              	<li>
-				              	getElementById(). Change is good. The DOM API (an API is just a way for one program (e.g. ours) to talk to another (e.g. the browser)) lets us manipulate the page. Let's say we wanted to change the h1 element on a page. Before we can change the element, we have to select it. The easiest way is to select a node by its ID, since an ID can only appear once on a page. 
+				              	<font color="blue">getElementById(). </font>Change is good. The DOM API (an API is just a way for one program (e.g. ours) to talk to another (e.g. the browser)) lets us manipulate the page. Let's say we wanted to change the h1 element on a page. Before we can change the element, we have to select it. The easiest way is to select a node by its ID, since an ID can only appear once on a page. 
 				              	
 				              	Open this codepen: <a target="_blank" href="http://codepen.io/mccambridge/pen/fHKmn">http://codepen.io/mccambridge/pen/fHKmn</a>. In the JavaScript window on the right, enter the following code. The result will automatically re-run.
 				              	
@@ -915,7 +915,7 @@ alert(theHeader);
 
 				              	</li><br>
 				              	<li>
-				              	Accessing a Text Node Now that we have access to an element and remembering that text is a node in itself, how can we dive one level down into the text node?
+				              	<font color="blue">Accessing a Text Node: </font> Now that we have access to an element and remembering that text is a node in itself, how can we dive one level down into the text node?
 				              	
 				              	<pre class="visible">
 var theHeader = document.getElementById('the-title');
@@ -930,7 +930,7 @@ theHeader.innerHTML = 'Well, why don\'t you write your own header.';
 				              	</li><br>
 				              	
 				              	<li>
-				              	Other Ways To Access a Node The browser gives us a few other methods to grab hold of our HTML elements. Let's start with document.getElementsByTagName(). Notice it's 'elements' (plural). This method returns an array. Try the following in the CodePen.
+				              	<font color="blue">Other Ways To Access a Node: </font> The browser gives us a few other methods to grab hold of our HTML elements. Let's start with document.getElementsByTagName(). Notice it's 'elements' (plural). This method returns an array. Try the following in the CodePen.
 				              	
 				              	<pre class="visible">
 var theHeader = document.getElementsByTagName('h1');
@@ -950,7 +950,7 @@ theHeader.innerHTML = 'This works with id, class and tag name. It selects the fi
 				              	</li><br>
 				              	
 				              	<li>
-				              	Getting And Setting Attributes Aside from text, attributes are the other important side of HTML elements. Text populates our pages with content. Attributes give our elements options. Without attributes, img tags would be sourceless. Anchor tags would be href-less. What if we want to dive into selectors? Let's start with a fresh CodePen:
+				              	<font color="blue">Getting And Setting Attributes: </font> Aside from text, attributes are the other important side of HTML elements. Text populates our pages with content. Attributes give our elements options. Without attributes, img tags would be sourceless. Anchor tags would be href-less. What if we want to dive into selectors? Let's start with a fresh CodePen:
 				              	<a target="_blank" href="http://codepen.io/mccambridge/pen/IxGDq">http://codepen.io/mccambridge/pen/IxGDq</a>
 				              	
 				              	<pre class="visible">
@@ -969,7 +969,7 @@ theKitteh.setAttribute('src', 'http://placekitten.com/900/200');
 				              	</li><br>
 				              	
 				              	<li>
-				              	createElement() & appendChild() More kitteh! With JavaScript, there are a few ways to add new nodes to your HTML document. Let's start with one more kitteh.
+				              	<font color="blue">createElement() & appendChild(): </font> More kitteh! With JavaScript, there are a few ways to add new nodes to your HTML document. Let's start with one more kitteh.
 				              	
 				              	<pre class="visible">
 // get the body tag then create a new img element for our new feline
@@ -986,7 +986,7 @@ bodyTag.appendChild(newKitteh);
 				              	</li><br>
 				              	
 				              	<li>
-				              	Quick Exercise Let's make the cat image rotate, using the CSS I've already defined in the CodePen. Anything with the class 'rotating' will spin. Using what we've learned so far, how can you make the cat rotate?
+				              	<font color="blue">Quick Exercise: </font> Let's make the cat image rotate, using the CSS I've already defined in the CodePen. Anything with the class 'rotating' will spin. Using what we've learned so far, how can you make the cat rotate?
 				              	</li>
 				              </ol>
 				            </p>
@@ -1021,7 +1021,7 @@ bodyTag.appendChild(newKitteh);
 				            
 				            <p class="exercise_box_details">
 				              <ol>
-				              	<li>Changing styles with JavaScript. Every node in the DOM has a style object associated with it. You can get and set styles by accessing the style you want to change via node.style.styleName. Where CSS uses hyphenated syntax for style names, its JS counterpart uses camelCase.
+				              	<li><font color="blue">Changing styles with JavaScript.</font> Every node in the DOM has a style object associated with it. You can get and set styles by accessing the style you want to change via node.style.styleName. Where CSS uses hyphenated syntax for style names, its JS counterpart uses camelCase.
 				              		
 				              		Let's head back over to our CodePen: <a href="http://codepen.io/mccambridge/pen/IxGDq">http://codepen.io/mccambridge/pen/IxGDq</a>. Let's take the square 200px x 200px cat image and make it a circle using the CSS border-radius property.
 				              		
@@ -1034,7 +1034,7 @@ newKitteh.style.borderRadius = '50%';
                   </pre>
 				              	</li><br>
 				              	<li>
-				              	Getting styles via JavaScript. The styles object is exactly that. You can get all of the styles for a particular node to see what has been set.
+				              	<font color="blue">Getting styles via JavaScript.</font> The styles object is exactly that. You can get all of the styles for a particular node to see what has been set.
 				              	
 				              	<pre class="visible">
 newKitteh = document.createElement('img');
@@ -1063,7 +1063,7 @@ alert(kittehBorderRadius);
                   </pre>
 				              	</li><br>
 				              	<li>
-				              	Getting an element's classes. Classes are powerful tools in HTML and CSS. Being able to manipulate them in JS is quite useful. You might have an 'active' class or a 'disabled' class that you need to toggle on and off to indicate an element's state in your app. First, we'll create a bunch of kittehs with a class name equal to kitteh-[num] where num is the loop increment in which it was created.
+				              	<font color="blue">Getting an element's classes.</font> Classes are powerful tools in HTML and CSS. Being able to manipulate them in JS is quite useful. You might have an 'active' class or a 'disabled' class that you need to toggle on and off to indicate an element's state in your app. First, we'll create a bunch of kittehs with a class name equal to kitteh-[num] where num is the loop increment in which it was created.
 				              	
 				              	<pre class="visible">
 var urlBase = 'http://placekitten.com/',
