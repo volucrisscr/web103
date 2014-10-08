@@ -208,7 +208,7 @@ li.exercise:hover{
 
 /* make active link blue
 li.exercise:active{
-	color: blue;
+	color: rgb(39,77,138);
 } */
 
 li.assignment{
