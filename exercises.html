@@ -381,10 +381,10 @@ Think of it this way:
 				              <ol>
 				              	<li>Let's take a common use case. We want print out to a greeting to the user. If you did that without a function you would do something like this:
 				              	<pre class="visible">var userName = "Josh Soileau";
-console.log('Hello, ' + userName);
-console.log('It's nice to see you today.');
-console.log('Looks like you've got a lot on your plate today.')
-console.log('Better get to work!');</pre>
+console.log("Hello, " + userName);
+console.log("It's nice to see you today.");
+console.log("Looks like you've got a lot on your plate today.");
+console.log("Better get to work!");</pre>
 				              	</li><br>
 				              	<li>But if you had different userNames, you'd have to do all 5 lines over and over again for every user. Or, we could just use a function! Here's the function syntax:
 				              	<pre class="visible">
@@ -400,10 +400,10 @@ myFunctionName( SOME PARAMETER I WANT TO PASS );
 								Here's the code we had before, but this time in function form!
 								<pre class="visible">
 var greetTheUser = function( userName ) {
-  console.log('Hello, ' + userName);
-  console.log('It's nice to see you today.');
-  console.log('Looks like you've got a lot on your plate today.')
-  console.log('Better get to work!');
+  console.log("Hello, " + userName);
+  console.log("It's nice to see you today.");
+  console.log("Looks like you've got a lot on your plate today.");
+  console.log("Better get to work!");
 };
                   </pre>
 								IMPORTANT NOTE: Just writing that code out WILL NOT RUN that code. 
@@ -421,10 +421,10 @@ greetTheUser( "Josh Soileau" );
 								Let's look at our function again:
 								<pre class="visible">
 var greetTheUser = function( userName ) {
-  console.log('Hello, ' + userName);
-  console.log('It's nice to see you today.');
-  console.log('Looks like you've got a lot on your plate today.')
-  console.log('Better get to work!');
+  console.log("Hello, " + userName);
+  console.log("It's nice to see you today.");
+  console.log("Looks like you've got a lot on your plate today.");
+  console.log("Better get to work!");
 };
                   </pre>		
 								As you see, our function expects to be passed something (as you can see because there is a variable inside the parenthesis of the function declaration).
@@ -468,20 +468,20 @@ var thisShouldEqualFourteen = timesTwo( 7 );
 				            	<li>Here's our previous function:
 				            	<pre class="visible">
 var greetTheUser = function( userName ) {
-  console.log('Hello, ' + userName);
-  console.log('It's nice to see you today.');
-  console.log('Looks like you've got a lot on your plate today.')
-  console.log('Better get to work!');
+  console.log("Hello, " + userName);
+  console.log("It's nice to see you today.");
+  console.log("Looks like you've got a lot on your plate today.");
+  console.log("Better get to work!");
 };
                   </pre>
 				            	</li><br>
 				            	<li>Inside this function we make a variable called "userName". What happens if we try and access that variable somewhere else, like this:
 				            	 <pre class="visible">
 var greetTheUser = function( userName ) {
-  console.log('Hello, ' + userName);
-  console.log('It's nice to see you today.');
-  console.log('Looks like you've got a lot on your plate today.')
-  console.log('Better get to work!');
+  console.log("Hello, " + userName);
+  console.log("It's nice to see you today.");
+  console.log("Looks like you've got a lot on your plate today.");
+  console.log("Better get to work!");
 };
 
 console.log( userName );
