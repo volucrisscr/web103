@@ -24,9 +24,7 @@
         1. The "thisIsTheHTML" element.
         2. The "thisIsTheHead" element.
         3. The "thisIsTheBody" element. */
-// document.getElementById('thisIsTheHTML');
-// document.getElementById('thisIsTheHead');
-// document.getElementById('thisIsTheBody');
+
 
 
 
@@ -38,9 +36,6 @@
         3. Grab the body element and use the .style attribute to change the background color to "purple" (hint, you want
            to get the backgroundColor attribute from the .style attribute */
 
-// console.log( document.getElementById('thisIsTheBody').innerHTML );
-// document.getElementById('thisIsTheBody').innerHTML = "Josh Soileau";
-// document.getElementById('thisIsTheBody').style.backgroundColor = "purple";
 
 
 
@@ -60,9 +55,7 @@
 var login = function() {
 
   /* Write code here */
-  var user = prompt("Enter your Username");
-  document.getElementById("userName").innerHTML = user;
-  document.getElementById('overlay').innerHTML = "";
+
 
 }
 
@@ -83,23 +76,19 @@ var login = function() {
 var changeUserAddress = function() {
 
   /* Write code here */
-  var userAddress = prompt("Enter your Address");
-  document.getElementById("userAddress").innerHTML = userAddress;
 
 
 }
 var changeAccountNumber = function() {
 
   /* Write code here */
-  var accountNumber = prompt("What would you like to change your account number to?");
-  document.getElementById("accountNumber").innerHTML = accountNumber;
+
 
 }
 var changeAccountOpenDate = function() {
 
   /* Write code here */
-  var accountOpenDate = prompt("On what day did you open your account?");
-  document.getElementById("accountOpenDate").innerHTML = accountOpenDate;
+
 
 }
 
@@ -115,10 +104,7 @@ var changeAccountOpenDate = function() {
 var deposit = function() {
 
   /* Write code here */
-  var depositAmount = parseInt( prompt("How much would you like to deposit?") );
-  var currentBalance = parseInt( document.getElementById('balance').innerHTML );
-  var newBalance = currentBalance + depositAmount;
-  document.getElementById('balance').innerHTML = newBalance;
+
 
 }
 
@@ -131,10 +117,7 @@ var deposit = function() {
 var withdraw = function() {
 
   /* Write code here */
-  var withdrawAmount = parseInt( prompt("How much would you like to withdraw?") );
-  var currentBalance = parseInt( document.getElementById('balance').innerHTML );
-  var newBalance = currentBalance - withdrawAmount;
-  document.getElementById('balance').innerHTML = newBalance;
+
 
 }
 
@@ -150,9 +133,7 @@ var withdraw = function() {
 var forward = function() {
 
   /* Write code here */
-  var currentBalance = parseInt( document.getElementById('balance').innerHTML );
-  var newBalance = currentBalance * 1.03;
-  document.getElementById('balance').innerHTML = newBalance;
+
 
 }
 
@@ -166,9 +147,7 @@ var forward = function() {
 var back = function() {
 
   /* Write code here */
-  var currentBalance = parseInt( document.getElementById('balance').innerHTML );
-  var newBalance = currentBalance * .97;
-  document.getElementById('balance').innerHTML = newBalance;
+
 
 }
 
