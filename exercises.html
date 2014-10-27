@@ -106,20 +106,14 @@
 
 				  				<li class="exercise-day"> <span> Day 3 </span>
 				  					<ul class="exercise-list">
-					  					<li class="exercise assignment" data-index="12"> Object Basics </li>
-					  					<li class="exercise assignment" data-index="13"> The DOM </li>
-					  					<li class="exercise assignment" data-index="14"> The DOM API </li>
-					  					<li class="exercise assignment" data-index="15"> Deface Google </li>
-					  					<li class="exercise assignment" data-index="16"> Styles & Classes </li>
-					  					<li class="exercise assignment" data-index="17"> Basic JS Animation </li>
-					  					<li class="exercise assignment" data-index="18"> Events </li>
-					  					<li class="exercise assignment" data-index="19"> Slideshow </li>
+					  					<li class="exercise assignment" data-index="19"> Command Line </li>
+					  					<li class="exercise assignment" data-index="20"> Banking on It! </li>
 				  					</ul>
 				  				</li>
 
 				  				<li class="exercise-day"> <span> Day 4 </span>
 				  					<ul class="exercise-list">
-					  					<li class="exercise assignment" data-index="20"> Project </li>
+					  					<li class="exercise assignment" data-index="21"> Project </li>
 				  					</ul>
 				  				</li>
 				  			</ul>
@@ -700,568 +694,170 @@ var (crashTheParty = function( hostess )) {(( console.log("I wasn't invited to "
 				            
 				          </div>
 				          
-				          <!--*****/////  Assignment Box 12  /////*****-->
 				          
-				          <div class="exercise_text" data-index="12" >
-
-				            <h2> Object Basics </h2>
-				            				            
-				            <p class="exercise_box_details">
-				              This is where you get your feet wet with objects. Objects are everywhere in JS. They are an additional datatype, like Number and Array. In fact, they are quite similar to arrays in that they are multiple, multidimensional data stores and can contain any type of data. You can have an objet of objects, and object of arrays, etc.
-				            </p>
-				            
-				            <p class="exercise_box_details">
-				              The fundamental difference between objects and arrays is their construction as key/value pairs. Where arrays are simple collections with a numerical key, objects take a specified keyword. Objects can be referenced either by square bracket notation or by dot syntax. More about that below.
-				            </p>
-				            
-				            <p class="exercise_box_details">
-				              We won't get too deep into objects in this class, just enough to get started working with the DOM. But understanding how to use objets is key to understanding more advanced JavaScript and learning how to use JS frameworks like jQuery, Angular, Node, Backbone, Underscore, Moment, Meteor, React... The list goes on (and on).
-				            </p>
-				            
-				            <p class="exercise_box_details">
-				              <ol>
-				              	<li>
-				              		<p class="exercise_box_details">
-				              			Basic Notation. Objects are defined using curly braces. Inside the curly braces, your object will contain one or many key/value pairs, separated by a comma. Each key and value is separated by a colon. The key may be written without quotes, with single-quotes or with double-quotes.
-				              			<pre class="visible">
-{
-  key: 'value',
-  "iAmAKey": "I am a value",
-  'singleQuotes': "double quotes"
-};
-                  </pre>
-				            		</p>
-				              	</li>
-				              	<li>
-				              		<p class="exercise_box_details">
-				              			Accessing Values. To access the value of an object, simply refer to its key either via dot notation or by accessing its key in square brackets.
-				              			 <pre class="visible">
-var dog = {
-  breed: 'Great Dane',
-  color: 'harlequin',
-  food: 'small children'
-};
-
-// get the value using dot notation
-dog.food;
-
-// get the value using bracket notation
-dog['food'];
-
-// ^^^ note that we used food as a string in the last line.
-
-                  </pre>
-				            		</p>
-				              	</li>
-				              	<li>
-				              		<p class="exercise_box_details">
-				              			Properties and Methods. In regular JS, we have variables and functions. In objects, we generally refer to properties and methods in the same way. While this isn't as strict as other programming languages, you're still going to run into the terminology. Properties describe the object. Methods do something.
-				              			 <pre class="visible">
-var dog = {
-  // properties
-
-  breed: 'Great Dane',
-  color: 'harlequin',
-  food: 'small children',
-  
-  // methods
-
-  bark: function() {
-    alert('WOOF!');
-  },
-  
-  getColor: function() {
-    return this.color;
-    // this refers to the context in which the funciton is called
-    // this can get you into trouble
-    // if you're really curious, look up JavaScript's call() funciton
-  }
-};
-
-dog.bark();
-
-dog.getColor();
-                  </pre>
-				            		</p>
-				              	</li>
-				              	<li>
-				              		<p class="exercise_box_details">
-				              			Native Objects. JavaScript comes packages with a number of native objects like Math and Date. Back in the day, many designers worked with the Image object to preload mouseover images before you could really do that with CSS. Native objects ship with the browser (hence native) and are always there.
-				              			<pre class="visible">
-var someDate = new Date();
-someDate.getFullYear(); // ZOMG!
-
-// the Math object is really quite useful
-console.log('The Life of ' + Math.PI);
-
-// no, really
-Math.round(Math.PI);
-
-// by the way, this stuff is case sensitive, so watch out!
-                  </pre>
-				            		</p>
-				              	</li>
-				              	<li>
-				              		<p class="exercise_box_details">
-				              			The document and window Objects. Here is where things get a little more fun, especially for those of you who are bored of working exclusively in the console. Go ahead and type the following into the browser console:
-				              			<pre class="visible">
-window.
-                  </pre>
-				            		</p>
-				              	</li>
-				              </ol>
-				            </p>
-				            
-				            <p class="exercise_box_details">
-				              Notice the console is trying to autocomplete for you. Each autocomplete possibility is a member of the window object. With so many API's within the HTML spec, you have access to a TON of possibilities. Play with window.history and see what's in there.
-				            </p>
-				            
-				            <p class="exercise_box_details">
-				              The same goes for the document object. We have access to all kinds of browser behaviors just through the native document object. This is how we'll manipulate the DOM later on in the class. For now, let's move on ... what is the DOM, anyway?
-				            </p>
-				            
-				            
-				          </div>
-				          
-				          <!--*****/////  Assignment Box 13  /////*****-->
-				          
-				          <div class="exercise_text" data-index="13" >
-
-				            <h2> The Document Object Model (DOM) </h2>
-				            				            
-				            <p class="exercise_box_details">
-				              When you write an HTML document and load it in a browser, the browser interprets your HTML and builds a web page. The elements you write, the attributes in your elements and the text inside your elements are all nested together neatly in your HTML. The browser translates this structure into the page as a hierarchy of nodes and relationships. This is the DOM. It is simply a representation of the constructed web page itself, mapped to a hierarchical tree. Think of it as a map. The HTML you write is parsed by the browser and becomes the DOM. The DOM is the foundation of the page you see.
-				            </p>
-				            
-				            <p class="exercise_box_details">
-				              <ol>
-				              	<li><font color="blue"></>A Simple Page. </font>Consider the following HTML.
-				              	
-				              	<pre class="visible">
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;The World Cup is over&lt;/title&gt;
-    &lt;link rel="icon" type="image/x-icon" href="/images/favicon.ico"&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;div class="container"&gt;
-      &lt;h1 class="header"&gt;The World Cup is, like, over&lt;/h1&gt;
-      &lt;p style="color: #933;"&gt;Now we have to watch baseball. Ugh.&lt;/p&gt;
-      &lt;p class="footnote"&gt;Just kidding! Baseball is totes exciting cuz they score lots.&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-                  </pre>
-                  				Once the browser reads the markup and constructs the page, the DOM will look something like this.
-                  				
-                  				<pre class="visible">
-html
-  |-head
-  | |-title
-  | | |-"The World Cup is over"
-  | |-link
-  | | |-(rel="icon")
-  | | |-(type="image/x-icon")
-  | | |-(href="/images/favicon.ico")
-  |-body
-    |-div
-    |-(class="container")
-    |-h1
-    | |-(class="header")
-    | |-"The World Cup is, like, over"
-    |-p
-    | |-(style="color: #933;")
-    | |-"Now we have to watch baseball. Ugh."
-    |-p
-      |-(class="footnote")
-      |-"Just kidding! Baseball is totes exciting cuz they score lots."
-                  </pre>
-                  				
-                  				That is the DOM. You have element nodes, attribute nodes and text nodes. Technically, you could also have comment nodes, but let's stick with these three for now.
-				              	
-				              	</li><br>
-				              	<li><font color="blue">In the console. </font>Open up a console window. When you look at you document structure (Elements tab in Chrome Inspector, HTML tab in Firefox), it looks like the HTML you would have written. But this series of collapsible HTML is a visual representation of the DOM.
-				              		<p class="exercise_box_details">
-				              			This is the interpreted DOM. As we'll see in the next section, we can use JavaScript to manipulate the DOM. The result of those manipulations will be different than the original HTML document. But the browser console will always reflect the current state of the DOM.
-				          			</p>
-				              	</li>
-				              </ol>
-				            </p>
-				            
-				          </div>
-				          
-				          <!--*****/////  Assignment Box 14  /////*****-->
-				          
-				          <div class="exercise_text" data-index="14" >
-
-				            <h2> The DOM API </h2>
-				            				            
-				            <p class="exercise_box_details">
-				              Okay, great. We have the DOM. So what? The browser downloads your HTML, styles are applied, images and fonts loaded. Without a line of JavaScript, the DOM exists and a polished web page gets painted to my browser. What good is JavaScript?
-				            </p>
-				            
-				            <p class="exercise_box_details">
-				              <ol>
-				              	<li>
-				              	<font color="blue">getElementById(). </font>Change is good. The DOM API (an API is just a way for one program (e.g. ours) to talk to another (e.g. the browser)) lets us manipulate the page. Let's say we wanted to change the h1 element on a page. Before we can change the element, we have to select it. The easiest way is to select a node by its ID, since an ID can only appear once on a page. 
-				              	
-				              	Open this codepen: <a target="_blank" href="http://codepen.io/mccambridge/pen/fHKmn">http://codepen.io/mccambridge/pen/fHKmn</a>. In the JavaScript window on the right, enter the following code. The result will automatically re-run.
-				              	
-				              	<pre class="visible">
-var theHeader = document.getElementById('the-title');
-alert(theHeader);
-                  </pre>
-				              	getElementById() is a method on the document object. Notice the contents of the alert? It's an object. Every DOM element is an object. We'll learn what to do with that in a minute.
-
-				              	</li><br>
-				              	<li>
-				              	<font color="blue">Accessing a Text Node: </font> Now that we have access to an element and remembering that text is a node in itself, how can we dive one level down into the text node?
-				              	
-				              	<pre class="visible">
-var theHeader = document.getElementById('the-title');
-alert(theHeader.innerHTML);
-                  </pre>
-                  				innerHTML is a property of our HTML node object. It is simply a record of the HTML inside of this node. In the current case, the only HTML left is simple text. Let's try changing it.
-                  				
-                  				<pre class="visible">
-var theHeader = document.getElementById('the-title');
-theHeader.innerHTML = 'Well, why don\'t you write your own header.';
-                  </pre>	
-				              	</li><br>
-				              	
-				              	<li>
-				              	<font color="blue">Other Ways To Access a Node: </font> The browser gives us a few other methods to grab hold of our HTML elements. Let's start with document.getElementsByTagName(). Notice it's 'elements' (plural). This method returns an array. Try the following in the CodePen.
-				              	
-				              	<pre class="visible">
-var theHeader = document.getElementsByTagName('h1');
-alert(theHeader.length);
-                  </pre>
-                  				What happens if you add another h1 element? What if you want to manipulate the h1 elements? How would you accomplish that (remember looping around arrays from previous classes)? 
-                  				
-                  				The API also provides document.getElementsByClassName() which also returns an array but takes — you guessed it! — a class name as its parameter. 
-                  				
-                  				More recently, browser developers have included the document.querySelector() method, which takes a CSS selector, just like jQuery. Try this one in the CodePen:
-                  				
-                  				<pre class="visible">
-var theHeader = document.querySelector('#the-title');
-theHeader.innerHTML = 'This works with id, class and tag name. It selects the first instance of a match.'
-                  </pre>
-                  				The API also provides document.querySelectorAll() which returns multiples. MDN does a good job documenting the API <a href="https://developer.mozilla.org/en-US/docs/Web/API/document.querySelectorAll">here</a>.
-				              	</li><br>
-				              	
-				              	<li>
-				              	<font color="blue">Getting And Setting Attributes: </font> Aside from text, attributes are the other important side of HTML elements. Text populates our pages with content. Attributes give our elements options. Without attributes, img tags would be sourceless. Anchor tags would be href-less. What if we want to dive into selectors? Let's start with a fresh CodePen:
-				              	<a target="_blank" href="http://codepen.io/mccambridge/pen/IxGDq">http://codepen.io/mccambridge/pen/IxGDq</a>
-				              	
-				              	<pre class="visible">
-var theKitteh = document.querySelector('#awsum-kitteh-pic');
-alert(theKitteh.getAttribute('src'));
-                  </pre>
-                  
-                  				Using the node's getAttribute() method, we can check to see what the img src attribute is set to. What if we want to change it up?
-                  				
-                  				<pre class="visible">
-var theKitteh = document.querySelector('#awsum-kitteh-pic');
-theKitteh.setAttribute('src', 'http://placekitten.com/900/200');
-                  </pre>
-                  				
-                  				setAttribute() takes two parameters. The first selects which parameter on the element is getting reset. The second tells the browser what to set it to. Now, you can change any attribute on any element. Meow!
-				              	</li><br>
-				              	
-				              	<li>
-				              	<font color="blue">createElement() & appendChild(): </font> More kitteh! With JavaScript, there are a few ways to add new nodes to your HTML document. Let's start with one more kitteh.
-				              	
-				              	<pre class="visible">
-// get the body tag then create a new img element for our new feline
-var bodyTag = document.getElementsByTagName('body')[0],
-    newKitteh = document.createElement('img');
-
-// our new kitteh needs some attributes
-newKitteh.setAttribute('src', 'http://placekitten.com/200/200');
-newKitteh.setAttribute('alt', 'teh new kittehhhhhh');
-
-// add it to the body tag at the end
-bodyTag.appendChild(newKitteh);
-                  </pre>
-				              	</li><br>
-				              	
-				              	<li>
-				              	<font color="blue">Quick Exercise: </font> Let's make the cat image rotate, using the CSS I've already defined in the CodePen. Anything with the class 'rotating' will spin. Using what we've learned so far, how can you make the cat rotate?
-				              	</li>
-				              </ol>
-				            </p>
-				            
-				          </div>
-				          
-				          <!--*****/////  Assignment Box 15  /////*****-->
-				          
-				          <div class="exercise_text" data-index="15" >
-
-				            <h2> Deface Google </h2>
-				            				            
-				            <p class="exercise_box_details">
-				              Let's say you're late for work one day. Sure, you could make up and excuse and hope for the best. But what if you had some evidence to support your alibi? With your newfound JavaScript DOM manipulation skills, you could look up a page on Google, tweak it to work with your story and send your boss a screenshot of what "really" happened.
-				            </p>
-				            
-				            <p class="exercise_box_details">
-				              Yeah, we could poke around in the DOM inspector and let Firebug or Chrome Tools do the hard work. But we're proud JavaScript developers. Make up a story for why you were late to work and use the DOM manipulation methods we've learned to change the page to support your story.
-				            </p>
-				            
-				          </div>
-				          
-				          <!--*****/////  Assignment Box 16  /////*****-->
-				          
-				          <div class="exercise_text" data-index="16" >
-
-				            <h2> Style and Classes </h2>
-				            				            
-				            <p class="exercise_box_details">
-				              Manipulating styles and classes allows you to change the UI dynamically.
-				            </p>
-				            
-				            <p class="exercise_box_details">
-				              <ol>
-				              	<li><font color="blue">Changing styles with JavaScript.</font> Every node in the DOM has a style object associated with it. You can get and set styles by accessing the style you want to change via node.style.styleName. Where CSS uses hyphenated syntax for style names, its JS counterpart uses camelCase.
-				              		
-				              		Let's head back over to our CodePen: <a href="http://codepen.io/mccambridge/pen/IxGDq">http://codepen.io/mccambridge/pen/IxGDq</a>. Let's take the square 200px x 200px cat image and make it a circle using the CSS border-radius property.
-				              		
-				              		<pre class="visible">
-newKitteh = document.createElement('img');
-newKitteh.src = 'http://placekitten.com/200/200';
-document.getElementsByTagName('body')[0].appendChild(newKitteh);
-
-newKitteh.style.borderRadius = '50%';
-                  </pre>
-				              	</li><br>
-				              	<li>
-				              	<font color="blue">Getting styles via JavaScript.</font> The styles object is exactly that. You can get all of the styles for a particular node to see what has been set.
-				              	
-				              	<pre class="visible">
-newKitteh = document.createElement('img');
-newKitteh.src = 'http://placekitten.com/200/200';
-document.getElementsByTagName('body')[0].appendChild(newKitteh);
-
-newKitteh.style.borderRadius = '50%';
-
-var kittehStyles = newKitteh.style;
-console.dir(kittehStyles);
-                  </pre>
-                  
-                  				Notice, it's an object with most of its properties empty. The numerical array-like entries are for the border-radius we just set, which is simply shorthand for each of the corners of the node.
-                  				
-                  				You can also access each style individually.
-                  				
-                  				<pre class="visible">
-newKitteh = document.createElement('img');
-newKitteh.src = 'http://placekitten.com/200/200';
-document.getElementsByTagName('body')[0].appendChild(newKitteh);
-
-newKitteh.style.borderRadius = '50%';
-
-var kittehBorderRadius = newKitteh.style.borderRadius;
-alert(kittehBorderRadius);
-                  </pre>
-				              	</li><br>
-				              	<li>
-				              	<font color="blue">Getting an element's classes.</font> Classes are powerful tools in HTML and CSS. Being able to manipulate them in JS is quite useful. You might have an 'active' class or a 'disabled' class that you need to toggle on and off to indicate an element's state in your app. First, we'll create a bunch of kittehs with a class name equal to kitteh-[num] where num is the loop increment in which it was created.
-				              	
-				              	<pre class="visible">
-var urlBase = 'http://placekitten.com/',
-    bodyTag = document.getElementsByTagName('body')[0];
-
-for (var i = 1; i < 9; i++) {
-  createKitteh(i);
-}
-
-function createKitteh(num) {
-  var kitteh = document.createElement('img');
-  kitteh.setAttribute('src', urlBase + num + '00/200');
-  kitteh.className += 'kitteh kitteh-' + num;
-  bodyTag.appendChild(kitteh);
-}
-                  </pre>
-                  
-                  				node.className is a handy way for us to access the class list of an element. Since one element can have many classes (separated by spaces in your HTML), JS is smart enough to know that += means add to the class list. We're setting two classes to our new elements. But if we had accessed an existing element that already had classes, the += operator would ensure that we're merely adding classses to the element.
-                  				
-                  				Now let's get the class of an element and modify the element based on that class.
-                  				
-                  				<pre class="visible">
-var urlBase = 'http://placekitten.com/',
-    bodyTag = document.getElementsByTagName('body')[0],
-    kittehClasses = [],
-    disabled,
-    newKittehClasses = '';
-
-// create sum kittehs
-for (var i = 1; i < 9; i++) {
-  createKitteh(i);
-}
-
-var theKittehs = document.getElementsByClassName('kitteh');
-
-// disable kittehs divisible by three
-for (var i = 0; i < theKittehs.length; i++) {
-  if (i % 3 === 1) {
-    theKittehs[i].className += ' disabled';
-  }
-}
-
-//handleDisabledKittehs();
-
-function createKitteh(num) {
-  var kitteh = document.createElement('img');
-  kitteh.setAttribute('src', urlBase + num + '00/200');
-  kitteh.className += ' kitteh kitteh-' + num;
-  bodyTag.appendChild(kitteh);
-}
-
-function handleDisabledKittehs() {
-  for (var i = 0; i < theKittehs.length; i++) {
-    kittehClasses = theKittehs[i].className.split(' '); // convert space-separated string to array of classes
-    
-    // loop through classes
-    for (var j = 0; j < kittehClasses.length; j++) {
-      if (kittehClasses[j] === 'disabled') {
-      disabled = true;
-      }
-    }
-    if (disabled) {
-      theKittehs[i].className += ' disabledBorder';
-    } 
-    kittehClasses = [];
-    disabled = false;
-  }
-}
-                  </pre>
-                  				This is an absolutely convoluted example. But hopefully, you can see how we can loop through elements and check their classes. But you an also see how difficult it is to something as simple as check which classes belong to an element. jQuery made this process infinitely easier. And more complex processes, like traversing the DOM, were also made MUCH easier. If we have time, we'll look a bit at what jQuery can do.
-				              	</li>
-				              </ol>
-				            </p>
-				            
-				            
-				            
-				          </div>
-				          
-				          <!--*****/////  Assignment Box 17  /////*****-->
-				          
-				          <div class="exercise_text" data-index="17" >
-
-				            <h2> Basic JS Animation </h2>
-				            				            
-				            <p class="exercise_box_details">
-				              What is animation? On the screen, it's movement of some element over time. Basic animation is rather simple. In this exercise, we'll be applying a background image to a div and change the background's x (left/horizontal) position over time. You'll be introduced to the setTimeout function which repeatedly calls a function after a specified delay. Each time we run the function with setTimeout, we'll pull the background image position slightly to the left. It'll happen so quickly, it will look like animation.
-				            </p>
-				            
-				            <p class="exercise_box_details">
-				              <ol>
-				              	<li>Time for a fresh CodePen: <a href="http://codepen.io/pen/">http://codepen.io/pen/</a>.
-				              		
-				              		<pre class="visible">
-// set cloud properties
-var cloud = document.querySelector('#cloud');
-cloud.style.backgroundImage = "url('http://1-background.com/images/clouds/white-clouds-blue-sky-seamless-background-tile.jpg')";
-cloud.style.backgroundPositionX = 0;
-cloud.style.backgroundPositionY = 0;
-cloud.style.width = '100%';
-cloud.style.height = '314px';
-
-var animateCloud = function(speed) {
-  var speed = speed || 2; // this is shorthand for: if speed is set use it. otherwise, use the second value.
-  var currentOffset = parseInt(cloud.style.backgroundPositionX, 10); // parseInt will shave off the px part of the value
-  cloud.style.backgroundPositionX = (currentOffset - speed) + 'px'; // subtract our speed from the current position
-  
-  // every time animateCloud runs, we wait 35ms and run it again
-  setTimeout(animateCloud, 35, speed);
-
-  // setTimeout takes a function to be called (notice we're not calling it with () )
-  // the second parameter is how soon to call it in ms (1000ms in a second)
-  // each additional parameter are the parameters to send to the function we're calling
-}
-
-//animateCloud();
-                  </pre>
-				              	</li><br>
-				              	<li>See what other modifications you could make to this script to animate the scene differently.</li>
-				              </ol>
-				            </p>
-				            
-				          </div>
-				          
-				          <!--*****/////  Assignment Box 18  /////*****-->
-				          
-				          <div class="exercise_text" data-index="18" >
-
-				            <h2> JavaScript Events </h2>
-				            				            
-				            <p class="exercise_box_details">
-				              Events are generally triggers for some behavior to occur. This could be a mouse click on an element, the page itself loading, an image loading, the user entering a form field, a keystroke, etc. When an event occurs, the browser fires an event handler function that executes a piece of code. Let's dive in starting with our cloud animation.
-				            </p>
-				            
-				            <p class="exercise_box_details">
-				              <ol>
-				              	<li>So now we're simply going to create a function we want the event to call, and we're going to wire up the event itself. Events are incredibly powerful. You can probably see where we're going with this.
-				              		 <pre class="visible">
-// set cloud properties
-var cloud = document.querySelector('#cloud');
-cloud.style.backgroundImage = "url('http://1-background.com/images/clouds/white-clouds-blue-sky-seamless-background-tile.jpg')";
-cloud.style.backgroundPositionX = 0;
-cloud.style.backgroundPositionY = 0;
-cloud.style.width = '100%';
-cloud.style.height = '314px';
-
-var animateCloud = function(speed) {
-  var speed = speed || 2;
-  
-  var currentOffset = parseInt(cloud.style.backgroundPositionX, 10);  
-  cloud.style.backgroundPositionX = (currentOffset - speed) + 'px';
-  
-  setTimeout(animateCloud, 35, speed);
-}
-
-var handleClickYo = function() {
-  btn.style.display = 'none';
-  cloud.style.display = 'block';
-  animateCloud(1);
-}
-
-// set up the event
-var btn = document.getElementById('cloudControl');
-//btn.addEventListener('click', handleClickYo);
-                  </pre>
-				              	</li><br>
-				              	<li>There is a whole list of events over at MDN: <a href="https://developer.mozilla.org/en-US/docs/Web/Events">https://developer.mozilla.org/en-US/docs/Web/Events</a>. Be careful, not all of them are supported in every browser. (Always remember to make sure the code you write is supported by modern browsers.) ;)</li>
-				              </ol>
-				            </p>
-				            
-				          </div>
 				          
 				          <!--*****/////  Assignment Box 19  /////*****-->
 				          
 				          <div class="exercise_text" data-index="19" >
 
-				            <h2> Slideshow </h2>
+				            <h2> Understanding Command Line </h2>
 				            				            
 				            <p class="exercise_box_details">
-				              We might not have time to work this out in class. If you're having fun with this — and I'm sure you are ‐ then finish it at home. Let's build a slideshow of images. Let's keep it simple. We want three images of the same width and height to animate when you click on some previous and next buttons.
+				            	<h5>Commands we will cover </h5> 
+								<ul>
+									<li>cd</li>
+									<li>mkdir</li>
+									<li>touch</li> 
+									<li>ls</li> 
+									<li>mv</li> 
+									<li>cp</li>
+									<li>rm</li>
+									<li>cat</li>
+									<li>(vim?)</li>
+									<li>sudo</li>
+								</ul>
+
+								<h5>FOLDER STRUCTURE</h5>
+									<ul>
+										<li>robot</li>
+											<ul>
+												<li>torso</li>
+												<ul>
+													<li>neck</li>
+													<ul>
+														<li>head</li>
+													</ul>
+													<li>left_arm</li>
+													<ul>
+														<li>left_thumb</li>
+														<li>left_index</li>														<li>left_thumb</li>
+														<li>left_middle</li>
+														<li>left_ring</li>
+														<li>left_pinky</li>
+													</ul>
+													<li>right_arm</li>
+													<ul>
+														<li>right_thumb</li>
+														<li>right_index</li>														<li>left_thumb</li>
+														<li>right_middle</li>
+														<li>right_ring</li>
+														<li>right_pinky</li>
+													</ul>
+													<li>left_leg</li>
+													<ul>
+														<li>left_foot</li>
+													</ul>
+													<li>right_leg</li>
+													<ul>
+														<li>right_foot</li>
+													</ul>
+												</ul>
+											</ul>
+									</ul>
+								<img src="img/chart.jpg" />
+
+
+
+								<h5>TASKS</h5>
+
+								<ol>
+									<li>
+										<p>Today we are going to create a Robot using only the command line and folder structure.  We will use BASH commands to get around in the terminal and create all of the elements of our robot we will need. First we need to be in the user directory of our computer.</p>
+
+										<p><strong>cd ~ </strong>Brings you to the user directory of your computer</p>
+										<p><strong>mkdir robot </strong>Creates a folder called robot</p>
+										<p><strong>cd robot </strong>Brings you into the robot directory</p>
+										<p><strong>mkdir torso </strong>Creates the torso directory</p>
+									</li>
+
+									<li>
+										Everything will branch off of the torso directory like it does in real life so everything else in our robot will be a subdirectory of the torso.
+										<p><strong>cd torso </strong>Changes your current directory to the torso directory</p>	
+									</li>
+
+									<li> 
+										<p>We’ll start with creating the head.</p>
+										<p><strong>mkdir neck </strong>Will create a directory with the name neck for us.</p>
+										<p><strong>cd neck </strong>Changes our current directory to the neck directory.</p>
+										<p><strong>mkdir head </strong>Will create the head directory.</p>
+							 		</li>
+
+							 		<li>
+							 			<p>Now you can see how we will create directories and move in to subfolders.
+										<p>If we want to get back to our user directory we can type: 
+										<strong>cd ~</strong></p>
+										<p>To get to the torso directory we would type:
+										<strong>cd ~/robot/torso</strong></p>
+										<p>inally, you can move up to a parent directory by typing 
+										<strong>cd ..</strong></p>
+							 		</li>
+
+							 		<li>Using the directory structure diagram, continue to create all of the directories necessary to create our robot.</li>
+
+							 		<li>
+									<h5>THE BRAIN</h5>
+
+										<p>Our robot needs a brain.  To do this we will need to create a file in the head folder called brain.  It is very easy to create a new file in command line using the touch command.</p>
+										<p>Move to the head folder using the cd command.</p>  
+										<p><strong>cd ~/robot/torso/neck/head</strong></p>
+										<p>Then simply type:
+										<strong>touch brain.txt</strong></p>
+										<p>This will create a file called brain.txt in the current directory which in our case is the head directory.
+										Now we need to prove to ourselves that we created the file.  To do this we can list the contents of the head directory using the ls command.</p>
+										<p>Simply type: <strong>ls</strong></p> 
+										<p>sudo apt-get install vim  (if necessary)</p>
+										<p><strong>vim brain.txt </strong></p> 
+										<p>Let's discuss how to write contents of file through vim</p>
+									</li>
+
+									<li>
+										<p>Let's verify that our brain has content.</p>
+										<p>Type: <strong>cat brain.txt</strong> This command allows us to diplay the contents of a file.
+									</li>
+
+									<li>
+										<p>Lets create some wires that will exist in our robot's arms and legs.  We will create one file called wire.txt and then copy it to other areas of the robot. </p>
+										<p>First navigate to the left arm.   <strong>cd ~/robot/torso/left_arm</strong></p>
+										<p>Create the wire.txt file with <strong>touch wire.txt</strong></p>
+										<p>Now we will copy that file to different areas, for example :</p>
+										<p><strong>cp wire.txt ~/robot/torso/right_arm/wire.txt</strong></p>
+									</li>
+
+									<li>
+										<p>Now we need to give our robot life.  We will add a battery to the robot where it's heart is and make it start to work.  Then we will remove the battery to turn it off.</p>  
+										<p>Navigate to the torso of the robot.  We will create the battery/heart of the robot with: </p>
+										<p><strong>touch battery.txt</strong></p>
+										<p>Use <strong>rm battery.txt</strong> to turn the robot off.</p>
+										<p>Use <strong>ls</strong> to verify that the file has been deleted. </p>  
+										<p>Use <strong>touch battery.txt</strong> to bring it back. </p>
+									</li>
+				            </p>
+				            
+				          </div>
+
+				          <!--*****/////  Assignment Box 20  /////*****-->
+				          
+				          <div class="exercise_text" data-index="20" >
+
+				            <h2> Banking on it! </h2>
+				            				            
+				            <p class="exercise_box_details">
+				              In this part of the class we are going to get in to the nitty gritty of why and how we actually use javascript
 				            </p>
 				            
 				            <p class="exercise_box_details">
-				              What are the components of a slideshow, or carousel? We already listed some. We need images. We need buttons or links to which we wire up events. We need an outer container that will hide everything but the current image. We need an inner container that will be wide enough for our images to sit side-by-side-by-side.
+				              We are going to be working in ACTUAL JS files (gasp!) and writing code that actually gets loaded through a SCRIPT tag on a page.
 				            </p>
 				            
 				            <p class="exercise_box_details">
-				              In the JavaScript, we need an animation function that sends the images left and right. We need to track where we are in the slideshow. We need events to call the animation function and tell the slide tracker what's going on. Finally, we need to handle shuffling the slides so that one slide is always to the left and right of the current slide.
-				            </p>
-				            
-				            <p class="exercise_box_details">
-				              It's probably also a good idea to only allow one click to be processed until the current cycle finishes running. How do we wire this all together?
+				              Go ahead and download the course materials for this exercise <a href="Day3.zip">HERE</a>, all the instructions are provided inside! Good Luck!
 				            </p>
 				            
 				          </div>
 				          
-				          <!--*****/////  Assignment Box 20  /////*****-->
+				          <!--*****/////  Assignment Box 21  /////*****-->
 				          
-				          <div class="exercise_text" data-index="20" >
+				          <div class="exercise_text" data-index="21" >
 
 				            <h2> With Great Power Comes Great Responsibility </h2>
 				            				            
