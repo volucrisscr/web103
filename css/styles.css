@@ -188,6 +188,8 @@ li.exercise-day{
     list-style: none;
 
     font-size: 20pt;
+    line-height: 24px;
+    margin-top: 15px;
 }
 
 ul.exercise-list{

@@ -1,0 +1,902 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <title>Web Basics 103 - CODEcamp Exercises</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/vendor/modernizr.js"></script>
+  </head>
+  <body>
+  	<div class = "page">
+
+	  	<div class="off-canvas-wrap" data-offcanvas>
+		  <div class="inner-wrap">
+
+		  	<nav class="full-nav hide-for-small">
+		  		<div class="row">
+		  			<div class="medium-5 columns">
+			  			<ul class = "navbar navbar-left"> 
+			  				<li><a href="index.html">Home</a></li>
+			        		<li><a href="exercises.html">Exercises</a></li>
+			  			</ul>
+		  			</div>
+		  			<div class="medium-2 columns">
+			  			<div class = "logo-wrapper">
+			  				<a href="http://www.chscodecamp.com/"><img src = "img/logo.svg" class = "logo"></a>
+			  			</div>
+		  			</div>
+		  			<div class="medium-5 columns">
+			  			<ul class = "navbar navbar-right"> 
+			  				<li><a href="screencasts.html">Screencasts</a></li>
+			        		<li><a href="resources.html">Resources</a></li>
+			  			</ul>
+		  			</div>
+		  		</div>
+		  	</nav>
+
+		    <nav class="tab-bar show-for-small">
+		      <section class="left-small">
+		        <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+		      </section>
+
+		      <section class="middle tab-bar-section">
+		      	<div class = "img-wrapper"><img src="img/logo.svg" class="small-logo"></div>
+		        <h1 class="title">CODEcamp</h1>
+		      </section>
+
+		    </nav>
+
+		    <aside class="left-off-canvas-menu nav-height">
+		      <ul class="off-canvas-list">
+		        <li><label>Web Basics 103</label></li>
+		        <li><a href="index.html">Home</a></li>
+		        <li><a href="exercises.html">Exercises</a></li>
+		        <li><a href="screencasts.html">Screencasts</a></li>
+		        <li><a href="resources.html">Resources</a></li>
+		        <li><label>Day 1</label></li>
+		        <li class="exercise assignment" data-index="1"><a href="#">Variables</a></li>
+		        <li class="exercise assignment" data-index="2"><a href="#">Loops</a></li>
+		        <li class="exercise assignment" data-index="3"><a href="#">Whatever</a></li>
+		        <li class="exercise assignment" data-index="4"><a href="#">Assignment: Text</a></li>
+
+		        <li><label>CODEcamp</label></li>
+		        <li><a href="http://www.chscodecamp.com/">Main Website</a></li>
+		        <li><a href="http://www.chscodecamp.com/courses/web-basics-101-intro-web/">Class Listing</a></li>
+		      </ul>
+		    </aside>
+
+
+		    <section class="main-section">
+	  			<div class="page-title">
+	  				<div class="row">
+	  					<div class = "small-12 columns">
+	  						<h3> Exercises <small class = "secondary-heading"> Developer Basics </small> </h3>
+	  					</div>
+	  				</div>
+	  			</div>
+	  			
+	  			<div class = "row">
+	  				<div class="small-8 small-offset-2 medium-2 medium-offset-0 columns hide-for-small">
+			  			<div class="exercise-wrapper">
+				  			<ul class ="exercise-container">
+				  				<li class="exercise-day"> <span> Day 1 </span>
+				  					<ul class="exercise-list">
+					  					<li class="exercise assignment" data-index="1"> What is JavaScript? </li>
+					  					<li class="exercise assignment" data-index="2"> Numbers </li>
+					  					<li class="exercise assignment" data-index="3"> Strings </li>
+					  					<li class="exercise assignment" data-index="4"> Variables </li>
+					  					<li class="exercise assignment" data-index="5"> If Statements </li>
+					  					<li class="exercise assignment" data-index="6"> Arrays </li>
+					  					<li class="exercise assignment" data-index="7"> For Loops </li>
+				  					</ul>
+				  				</li>
+			  					
+			  					<li class="exercise-day"> <span> Day 2 </span>
+				  					<ul class="exercise-list">
+					  					<li class="exercise assignment" data-index="8"> Functions </li>
+					  					<li class="exercise assignment" data-index="9"> Scope </li>
+					  					<li class="exercise assignment" data-index="10"> Syntax </li>
+					  					<li class="exercise assignment" data-index="11"> Building an Online Bank </li>
+				  					</ul>
+				  				</li>
+
+				  				<li class="exercise-day"> <span> Day 3 </span>
+				  					<ul class="exercise-list">
+					  					<li class="exercise assignment" data-index="19"> Command Line </li>
+					  					<li class="exercise assignment" data-index="20"> Banking on It! </li>
+				  					</ul>
+				  				</li>
+
+				  				<li class="exercise-day"> <span> Day 4 </span>
+				  					<ul class="exercise-list">
+					  					<li class="exercise assignment" data-index="21"> Project </li>
+				  					</ul>
+				  				</li>
+				  			</ul>
+			  			</div>
+	  			</div>
+
+	  				<div class="small-10 small-offset-1 medium-9 medium-offset-0 columns exercise-content">
+
+	  				<!--*****/////  Exercise Content  /////*****-->
+        
+				        <!-- <div class="assignment_content"> -->
+				          
+				          <!--*****/////  Assignment Box 1  /////*****-->
+				          
+				          <div class="exercise_text active_exercise" data-index="1" >
+
+				            <h2> What is JavaScript? </h2>
+				            
+				            <h4> JavaScript != Java </h4>
+				            				            
+				            <p class="exercise_box_details">
+				              JavaScript is a programming language developed in the late 1990s by Netscape. Microsoft said no.
+				            </p>
+				            
+				            <p class="exercise_box_details">
+				              It's similar to most other programming languages, variables, loops, logic, functions. The difference is the browser engine.
+				            </p>
+				            
+				            <p class="exercise_box_details">
+				              Modern browsers let you practice JavaScript inside the browser in real time. How is this different from a language like C++?
+				            </p>
+				            
+				            <p class="exercise_box_details">
+				              JavaScript is still compiled, but it is compiled in the browser by the browser's JavaScript engine.
+				            </p>
+				            
+				            <p class="exercise_box_details">
+				              This means we can test our JavaScript in the browser before saving it to our .js files!
+				            </p>
+				            
+				          </div>
+				          
+				          <!--*****/////  Assignment Box 2  /////*****-->
+				          
+				          <div class="exercise_text" data-index="2" >
+
+				            <h2> Numbers </h2>
+				            				            
+				            <p class="exercise_box_details">
+				              We can use the JavaScript console in Google Chrome to write some JS! Open up Google Chrome.
+				            </p>
+				            
+				            <p class="exercise_box_details">
+				              <ol>
+				              	<li>Right click anywhere on the page and click 'inspect element'. Then click the console tab.<!-- (insert explanation of devtools here) --></li><br>
+				              	<li>There are a handful of variable types in JavaScript<!-- (insert explanation of variables here) -->. Let's start with numbers. Type some numbers in your JS console.</li><br>
+				              	<li>We can also do math in our console! Let's try some basic math. Add 2 numbers together. <pre>2 + 7</pre></li><br>
+				              	<li>We can get into the negatives as well. Create a negative math equation. <pre>2 * 7 - 100</pre></li><br>
+				              	<li>Decimals also work (kinda). Do some arithmetic with decimals. <pre>.5 * .5</pre><pre>.83 + .17</pre><pre>.999 - 3.212</pre></li><br>
+				              	<li>What about decimal subtraction? <pre>2 - .3</pre><pre>.86 - .177</pre><pre>.3 - .2</pre>
+				              		<p>What happened on that last one?</p>
+				              		<p>Like in other programming languages, decimals are floating point numbers, meaning the arithmetic can get sticky. Don't always trust your math to be correct! Always check it!</p>
+				              	</li>
+				              </ol>
+				            </p>
+				            
+				          </div>
+				          
+				          <!--*****/////  Assignment Box 3  /////*****-->
+				          
+				          <div class="exercise_text" data-index="3" >
+
+				            <h2> Strings </h2>
+				            				            
+				            <p class="exercise_box_details">
+				              Strings are a little bit funner to play with than numbers.
+				            </p>
+				            
+				            <p class="exercise_box_details">
+				              <ol>
+				              	<li>Another type of variable in JavaScript are strings. Create a string out of your name! <pre>"Josh Soileau"</pre></li><br>
+				              	<li>Guess, what? Strings can be added together too! Create two different strings and add them together. <pre>"My name is " + "Josh Soileau"</pre></li><br>
+				              	<li>But we get into weird stuff when we add two different TYPES of things together. Add a number and a string together. <pre>"My Name Is " + 42</pre><pre>2 + "2"</pre><pre>"86" + 7 + 5 + "3" + 0 + "9"</pre>
+				              		<p>How does this work?</p>
+				              	</li>
+				              </ol>
+				            </p>
+				            
+				          </div>
+				          
+				          <!--*****/////  Assignment Box 4  /////*****-->
+				          
+				          <div class="exercise_text" data-index="4" >
+
+				            <h2> Variables </h2>
+				            				            
+				            <p class="exercise_box_details">
+				              We now know we can create numbers and strings. But we will need to be able to save those things in memory. Enter the 'var' JavaScript keyword.
+				            </p>
+				            
+				            <p class="exercise_box_details">
+				              <ol>
+				              	<li>Remember the exercise where we added the strings "My name is " and "[insert my name]" together? Do the same thing but save those strings as variables first.
+				              		<pre>var introductionText = "My name is "; </br>var myName = "Josh Soileau";</br>introductionText + myName</pre>
+				              		<!-- <p>(insert explanation of the semantics above, what is var, what is the semicolon, the equals sign, etc.)</p> -->
+				              	</li>
+				              	<li>Variables work for all data types. Save 2 numbers into 2 different variables (name them appropriately), and a string into a third variable, then add them all together and save that into a 4th variable named "answer".
+				              		<pre>Answer left blank, to be completed by instructor in console.</pre>
+				              	</li>
+				              </ol>
+				            </p>
+				            
+				          </div>
+				          
+				          <!--*****/////  Assignment Box 5  /////*****-->
+				          
+				          <div class="exercise_text" data-index="5" >
+
+				            <h2> Logic, Part 1: If Statements </h2>
+				            				            
+				            <p class="exercise_box_details">
+				              So we can create these variables, but that's useless unless we add a little logic into it. Let's start with 'if', 'else' statements.
+				            </p>
+				            
+				            <p class="exercise_box_details">
+				              <ol>
+				              	<li>'If' statements let you run some code based on whether or not some condition passes. Here's the syntax:
+				              		<pre class="visible">if( SOME CONDITION TO CHECK ) { <br/>    CODE TO RUN IF CONDITION PASSES <br>} </pre>
+				              		<p>Here's an example: </p>
+				              		<pre class="visible">var oldLadyIsSinging = 1;<br/><br/>if( oldLadyIsSinging ) {<br/>    var itIsOver = 1;<br/>}</pre>
+				              	</li><br>
+				              	<li>What if we only want something to happen if the 'if' condition fails? 'Else' statements!
+				              		<pre class="visible">var oldLadyIsSinging = 1;<br/><br/>if( oldLadyIsSinging ) {<br/>    var itIsOver = 1;<br/>} else {<br/>    var itIsOver = 0;<br/>}</pre>
+				              	</li><br>
+				              	<li>We've secretly just introduced a NEW data type, BOOLEANS! Booleans are a data type that can only ever have 1 of 2 different values, true or false. Booleans are used in 'if' statements and loops. Here's a few examples of Booleans:
+				              		
+				              		<pre class="visible">true</pre>
+				              		<pre class="visible">false</pre>
+				              		<p>In addition to those two, comparison expressions can be evaluated as a boolean. Try putting these in your console and see what you get:
+				              			<pre>10 > 5</pre>
+				              			<pre>10 > 15</pre>
+				              			<pre>var myNameString = "My name is Josh Soileau";<br/>myNameString === "My name is Josh Soileau"</pre>
+				              			<pre>var myNameString = 123456;<br/>myNameString === "My name is Josh Soileau"</pre>
+				              		</p>
+				              	</li><br>
+				              	<li>All of these examples of booleans can be used inside an if statement as the condition to check!</li><br>
+				              	<li>PROMPT exercise. To be explained in class!</li>
+				              </ol>
+				            </p>
+				            
+				          </div>
+				          
+				          <!--*****/////  Assignment Box 6  /////*****-->
+				          
+				          <div class="exercise_text" data-index="6" >
+
+				            <h2> Arrays </h2>
+				            				            
+				            <p class="exercise_box_details">
+				              Let's learn about yet another data type in JavaScript: arrays. Arrays are one of the most useful things in JavaScript, they let you organize things in groups.
+				            </p>
+				            
+				            <p class="exercise_box_details">
+				              <ol>
+				              	<li>Arrays are defined by square brackets []. When the compiler sees those square brackets, it knows to expect an array of items inside the brackets.
+				              		<pre class="visible">[ ARRAY ITEMS GO IN HERE ]</pre>
+				              	</li><br>
+				              	<li>The items inside the brackets are all separated by commas, to signify the dividers to the compiler.
+				              		<pre class="visible">[ arrayItem, anotherArrayItem, yetAnotherArrayItem ]</pre>
+				              		In the above case we have an array of size 3.
+				              	</li><br>
+				              	<li>Create an array of strings. Make it have at least 4 items in it, and make each item be your favorite topping on a pizza. Save that array to a variable.
+				              		<pre>var pizzaTopings = [ "Cheese", "Pepperoni", "Green Peppers", "Red Peppers", "Mushrooms" ];</pre>
+				              	</li><br>
+				              	<li>Okay, so we now have an array with values in it. How do we get those values later? We can access arrays using INDEXES</li><br>
+				              	<li>What are indexes? They are slots in the array! But the secret is that the first slot of the array is index "0" (like all things comp sci). <!-- (insert explanation of starting at 0 and not 1). --> 
+Think of it this way:
+									<pre class="visible">[ "Cheese", "Pepperoni", "Green Peppers", "Red Peppers", "Mushrooms" ]<br/><br/>   Index 0    Index 1        Index 2         Index 3        Index 4</pre>
+								</li><br>
+								<li>So the way we access indexes of the array are by using indexes in the array. Here's the syntax:
+									<pre class="visible">var pizzaTopings = [ "Cheese", "Pepperoni", "Green Peppers", "Red Peppers", "Mushrooms" ];<br/>pizzaToppings[ NUMBER OF INDEX I WANT TO ACCESS ]</pre>
+								</li><br>
+								<li>To get the first index of the array we would use the 0th index.
+									<pre class="visible">var pizzaTopings = [ "Cheese", "Pepperoni", "Green Peppers", "Red Peppers", "Mushrooms" ];<br>pizzaToppings[0];</pre>
+								</li><br>
+								<li>To get the third index of the array we would use the 2nd index.
+									<pre class="visible">var pizzaTopings = [ "Cheese", "Pepperoni", "Green Peppers", "Red Peppers", "Mushrooms" ];<br>pizzaToppings[2];</pre>
+								</li><br>
+								<li>How do we get the last item in the array? In this case we know it's the 4th index.
+									<pre class="visible">var pizzaTopings = [ "Cheese", "Pepperoni", "Green Peppers", "Red Peppers", "Mushrooms" ];<br>pizzaToppings[4];</pre>
+									But what if we didn't know how long our array was? What if somebody inserts a 6th item in the array without us knowing?
+									You can learn how long an array is by calling ".length" on it like this:
+									<pre class="visible">[ "Cheese", "Pepperoni", "Green Peppers", "Red Peppers", "Mushrooms" ].length</pre>
+									Which is the same thing as saying:
+									<pre class="visible">var pizzaTopings = [ "Cheese", "Pepperoni", "Green Peppers", "Red Peppers", "Mushrooms" ];<br/>pizzaToppings.length</pre>
+									Notice how it returns the number "5". But our last index is index #4! So to get the last element in the array, we could do this:
+									<pre class="visible">var pizzaTopings = [ "Cheese", "Pepperoni", "Green Peppers", "Red Peppers", "Mushrooms" ];<br/><br/>pizzaToppings[ pizzaToppings.length - 1 ];</pre>
+								</li><br>
+								<li>It's important to note that arrays don't have to hold just 1 type of data. You can have an array of anything!
+									<pre class="visible">[ "Cheese", 42, 999 ]<br>[ "Rocky", true, false, "Bullwinkle" ]</pre>
+									You can even have an array of arrays!
+									<pre class="visible">[ [12, 32], ["Cherry", "Vanilla", false] ]</pre>
+								</li>
+				              </ol>
+				            </p>
+				            
+				          </div>
+				          
+				          <!--*****/////  Assignment Box 7  /////*****-->
+				          
+				          <div class="exercise_text" data-index="7" >
+
+				            <h2> Logic, Part 2: For Loops! </h2>
+				            				            
+				            <p class="exercise_box_details">
+				              Sometimes you want to run the same bit of code over and over again. There are a couple of ways to do that in JavaScript, we are going to start with For loops!
+				            </p>
+				            
+				            <p class="exercise_box_details">
+				              <ol>
+				              	<li>For loops are similar to if statements. You have some parenthesis and some curly braces. The code inside the curly braces is the code that runs during the loop. Here's the syntax:
+				              	<pre class="visible">for( BEFORE CODE ; WHILE CONDITION ; AFTER CODE ) {<br/>    CODE TO BE RUN DURING LOOP <br/>}<br/><br/>BEFORE CODE: this is set at the beginning of the loop<br>It is usually something like var i=0 or something like that<br/><br/>WHILE CONDITION: the condition to keep running the loop<br/><br/>AFTER CODE: this runs after every iteration of the loop</pre>
+				              	</li><br>
+				              	<li>
+				              	Here's a simple example of for loops:
+				              	<pre class="visible">var i;<br>var concatNumbersVar = "";<br>for( i=0; i<6; i++) {<br>    concatNumbersVar = concatNumbersVar + i;<br>}</pre>
+				              	At the top, we create two variables, one isn't defined yet (i), the other is an empty string. The loop starts at i = 0, and loops through as long as i < 6, but increasing i by 1 every time the loop finishes.
+				              	The code inside the loop takes our empty string, and appends a number on the back of it every time the loop happens (remember what happens when you add a string and a number together?)
+				              	</li><br>
+				              	<li> Exercise time!
+				              		<ol>
+				              			<li>Think about all the mechanical parts of an airplane. Create an array (at least length 6) containing all the parts of a plane that you think it needs to fly, and save that array to a variable.</li><br>
+				              			<li>Using a For loop iterate through this array, and use the "alert()" function to pop up and say each part of the plane.</li>
+				             		</ol>
+				              	</li><br>
+				              	<li> Extended exercise.
+				              		<ol>
+				              			<li>Instead of creating an array and then iterating through it like we just did, we are going to build our array in a for loop. Create an empty array called "airplaneParts"</li><br>
+				              			<li>Create a for loop that loops 6 times, and inside of it, use "prompt()" to ask the user to state a piece of an airplane. Save that value and "push" that value to your "airplaneParts" array.</li><br>
+				              			<li>After the array is finished (outside the loop), use "alert" to pop up and list all the parts that the user put in in the previous steps.</li>
+				              		</ol>
+				              	</li>
+				              </ol>
+				            </p>
+				            
+				          </div>
+				          
+				          <!--*****/////  Assignment Box 8  /////*****-->
+				          
+				          <div class="exercise_text" data-index="8" >
+
+				            <h2> All About Functions </h2>
+				            				            
+				            <p class="exercise_box_details">
+				              Sometimes in programming we have to repeat ourselves multiple times. When it comes to that kind of thing, we have a rule in programming. It's called D.R.Y., DON'T REPEAT YOURSELVES. Luckily, in programming, we have a concept called functions that let us perform repetetive behaviors in a simple way.
+				            </p>
+				            
+				            <p class="exercise_box_details">
+				              <ol>
+				              	<li>Let's take a common use case. We want print out to a greeting to the user. If you did that without a function you would do something like this:
+				              	<pre class="visible">var userName = "Josh Soileau";
+console.log("Hello, " + userName);
+console.log("It's nice to see you today.");
+console.log("Looks like you've got a lot on your plate today.");
+console.log("Better get to work!");</pre>
+				              	</li><br>
+				              	<li>But if you had different userNames, you'd have to do all 5 lines over and over again for every user. Or, we could just use a function! Here's the function syntax:
+				              	<pre class="visible">
+var myFunctionName = function( PARAMETER TO GIVE THE FUNCTION ) {
+  CODE INSIDE THE FUNCTION
+};
+                  </pre>
+				              	So then, whenever you wanted to run "CODE INSIDE THE FUNCTION", you would just call the function like this:
+				              	<pre class="visible">
+myFunctionName( SOME PARAMETER I WANT TO PASS );
+                  </pre>
+				              	I know that can be confusing, let's see an example.
+								Here's the code we had before, but this time in function form!
+								<pre class="visible">
+var greetTheUser = function( userName ) {
+  console.log("Hello, " + userName);
+  console.log("It's nice to see you today.");
+  console.log("Looks like you've got a lot on your plate today.");
+  console.log("Better get to work!");
+};
+                  </pre>
+								IMPORTANT NOTE: Just writing that code out WILL NOT RUN that code. 
+								All we did in that code was tell the computer "If anyone ever calls the function 'greetTheUser', do this code right here".
+								To actually run the code, we have to "call" it, like this:
+								<pre class="visible">
+greetTheUser( "Josh Soileau" );
+                  </pre>
+				              	</li><br>
+				              	<li>
+				              	So what is the thing inside of our call to greetTheUser()?
+								That is our "parameter".
+								Functions work a bit like machines, you give them SOMETHING, and they do things with it!
+								In this case, we are "giving" our greetTheUser function a string called "Josh Soileau".
+								Let's look at our function again:
+								<pre class="visible">
+var greetTheUser = function( userName ) {
+  console.log("Hello, " + userName);
+  console.log("It's nice to see you today.");
+  console.log("Looks like you've got a lot on your plate today.");
+  console.log("Better get to work!");
+};
+                  </pre>		
+								As you see, our function expects to be passed something (as you can see because there is a variable inside the parenthesis of the function declaration).
+								We are saying that the greetTheUser function expects to be called and passed an argument, and we are going to call that argument 'userName'.
+								The function doesn't know WHAT it is being passed, just that it is being passed SOMETHING.
+								Exercise: Try calling the function with a different data type, like a number, array, or object.
+								<pre>
+greetTheUser( 12.34 );
+greetTheUser( "HAL" );
+                  </pre>
+								As you can see, it treats it the same way! It saves whatever it is being passed into this 'userName' variable, and tries to use it as well as it can.
+				              	</li><br>
+				              	<li>
+				              	Functions can also return values that we can save for later. See this example:
+				              	<pre class="visible">
+var timesTwo = function(number) {
+    return number * 2;
+};
+
+var thisShouldEqualFourteen = timesTwo( 7 );
+                  </pre>
+				              	The above function expects to receive a number, does some math, and gives back a new number.
+								We can save the result in a variable. Super useful!
+				              	</li>
+				              </ol>
+				            </p>
+				            
+				          </div>
+				          
+				          <!--*****/////  Assignment Box 9  /////*****-->
+				          
+				          <div class="exercise_text" data-index="9" >
+
+				            <h2> All About Scope! </h2>
+				            				            
+				            <p class="exercise_box_details">
+				              Lets take a look at a concept called "scoping".
+				            </p>
+				            
+				            <ol>
+				            	<li>Here's our previous function:
+				            	<pre class="visible">
+var greetTheUser = function( userName ) {
+  console.log("Hello, " + userName);
+  console.log("It's nice to see you today.");
+  console.log("Looks like you've got a lot on your plate today.");
+  console.log("Better get to work!");
+};
+                  </pre>
+				            	</li><br>
+				            	<li>Inside this function we make a variable called "userName". What happens if we try and access that variable somewhere else, like this:
+				            	 <pre class="visible">
+var greetTheUser = function( userName ) {
+  console.log("Hello, " + userName);
+  console.log("It's nice to see you today.");
+  console.log("Looks like you've got a lot on your plate today.");
+  console.log("Better get to work!");
+};
+
+console.log( userName );
+                  </pre>
+				            	What do we get there and why?
+								In JavaScript, variables (and functions) are only available in the context they are defined in.
+				            	</li><br>
+				            	<li>
+				            	Think of scoping like each bit of code is a small piece of a neighborhood.
+								Each "function" is a fenced in property. Anything on the inside, stays in the inside.
+								In our example above, the "userName" variable is created inside our fenced in yard.
+								But then we try and use that variable OUTSIDE of the fence, and it doesn't work. That is because OUTSIDE of the fence, we don't know what "userName" is, it is undefined!
+				            	</li><br>
+				            	<li>The same thing will happen here as well:
+				            	<pre class="visible">
+var prepareForUser = function( userName ) {
+  var greetingString = "Hello, " + userName;
+  var userAge = 54;
+  var userFavoriteColor = "Beige";
+};
+
+// ALWAYS REMEMBER TO CALL YOUR FUNCTION!
+// Otherwise, the code inside it won't run! 
+prepareForUser( "Josh Soileau" );
+
+console.log( greetingString );
+console.log( "Your age is " + userAge );
+console.log( "Your favorite color is " + userFavoriteColor );
+                  </pre>
+				            	</li><br>
+				            	<li>
+				            	So how do we fix that code above??
+								Remember how our code is kind of like a neighborhood with fences in it?
+								Well, if we create a variable OUTSIDE of ALL of the fences, then that variable is available everywhere, even INSIDE the fences.
+								That is called a variable being "global". Let's look at an example:
+								<pre class="visible">
+var wildNeighborhoodDog = "Fido";
+var dogIsFarAway = 1;
+
+var callDog = function( dogName ) {
+
+  if( dogIsFarAway ) {
+    console.log( "Here, " + dogName + ", here boy!" );
+  } else {
+    console.log( "Good boy, " + dogName );
+  }
+
+};
+
+callDog( wildNeighborhoodDog );
+                  </pre>
+								Because our "wildNeighborhoodDog" and "dogIsFarAway" variables are GLOBAL, we can use them inside our "callDog" function.
+								Let's try and fix our code from before. We can solve our problem by making the variables global, like this:
+								   <pre class="visible">
+var greetingString;
+var userAge;
+var userFavoriteColor;
+
+var prepareForUser = function( userName ) {
+  greetingString = "Hello, " + userName;
+  userAge = 54;
+  userFavoriteColor = "Beige";
+};
+
+// ALWAYS REMEMBER TO CALL YOUR FUNCTION!
+// Otherwise, the code inside it won't run! 
+prepareForUser( "Josh Soileau" );
+
+console.log( greetingString );
+console.log( "Your age is " + userAge );
+console.log( "Your favorite color is " + userFavoriteColor );
+                  </pre>
+								All we had to do is DECLARE our variables globally. We didn't even need to assign them any value.
+								Just the act of declaring them outside the function meant that we could access them outside the function later on.
+				            	</li><br>
+				            	<li>Now we know that we can make variables GLOBAL and have access to them everywhere. So why don't we do this for everything??
+				            	Take a look at this code below, tell me what the output is:
+				            	<pre class="visible">
+var numberOfBalloons = 99;
+var balloonsColor = "Red";
+
+var popOneBalloon = function( balloonsColor ) {
+
+  numberOfBalloons = numberOfBalloons - 1;
+  var balloonsColor = "Blue";
+
+};
+
+console.log( numberOfBalloons + " " +  balloonsColor + " balloons go by." );
+                  </pre>
+				            	What is the output of that code and why? (move the console.log around to learn more)
+				            	</li><br>
+				            	<li>This type of thing is why it's a bad idea to have too many global variables. By saying that YOUR variable is global, you are effectively preventing other coders from using that variable name in different scopes. If you can, try and do without global variables.</li>
+				            </ol>
+				            
+				          </div>
+				          
+				          <!--*****/////  Assignment Box 10  /////*****-->
+				          
+				          <div class="exercise_text" data-index="10" >
+
+				            <h2> All About Syntax! </h2>
+				            				            
+				            <p class="exercise_box_details">
+				              Time for some exercise!
+				            </p>
+				            
+				            <p class="exercise_box_details">
+				              Here's an example of a properly formed function:
+				              <pre class="visible">
+var greetTheUser = function( userName ) {
+  console.log("Hello, " + userName);
+  console.log("It's nice to see you today.");
+  console.log("Looks like you've got a lot on your plate today.");
+  console.log("Better get to work!");
+};</pre>
+				              And here's a properly formatted function call:
+				              <pre class="visible">
+greetTheUser( "Josh Soileau" );</pre>
+				              For reference, this is also a properly formatted function call and is effectively the same thing:
+				              <pre class="visible">
+var myName = "Josh Soileau";
+greetTheUser( myName );</pre>
+				              Here's some examples of functions that are NOT properly formatted, or have scoping issues. See if you can find the bug and fix all of them!
+				            </p>
+				            
+				             <p class="exercise_box_details">
+					              <ul>
+					                <li>
+					                   <pre class="visible">
+var demandFood( snackFood ) {
+  console.log("I demand to be served " + snackFood);
+}
+
+demandFood("Grapes from a Vine");
+                  </pre>
+					                </li><br>
+					                <li>
+					                 <pre class="visible">
+var thankHostess = function{ action } (
+  console.log('Thank you for ' + action + ".");
+);
+
+thankHostess("feeding me Grapes from a Vine");
+                  </pre>
+					                </li><br>
+					                <li>
+					                  <pre class="visible">
+function var = inviteToDinner( person ) {
+  console.log( "Okay, fine, " + person + "!");
+  console.log( "You can come to my fancy dinner party!" );
+  console.log( "Stop nagging me!" );
+}
+
+inviteToDinner( "Nagging Steve" );
+                  </pre>
+					                </li><br>
+					                <li>
+					                  <pre class="visible">
+var (crashTheParty = function( hostess )) {(( console.log("I wasn't invited to " + hostess + "'s party, but I'm coming anyway"); )))}
+                  </pre>
+					                </li>
+					              </ul>
+					            </p>
+				            
+				          </div>
+				          
+				          <!--*****/////  Assignment Box 11  /////*****-->
+				          
+				          <div class="exercise_text" data-index="11" >
+
+				            <h2> Building an Online Bank </h2>
+				            				            
+				            <p class="exercise_box_details">
+				              	Now it's time for today's big assignment.
+				              	We are going to build a banking system in our browser.
+								For organizational purposes, this would be better kept inside of a ".js" file.
+								So, open up a text editor (like sublime text) and create a new file on the desktop called banking.js
+				            </p>
+				            
+				           <p class="exercise_box_details">
+				              We are going to be creating a series of functions to handle a series of global variables.
+				            </p>
+				            
+				            <p class="exercise_box_details">
+				              These exercises will intentionally be left unanswered for now, and will be filled in during class as we complete them.
+				            </p>
+				            
+				            <p class="exercise_box_details">
+				              <ol>
+				              	<li>First, create global variables for userName, userAddress, accountNumber, accountOpenDate, and accountBalance.
+									For now, these variables will be strings and numbers. We may change that later on to account for multiple account holders if we have time.
+									Declare your variables at the TOP of your file.</li><br>
+				              	<li>First thing's first. Create a function called printAccountInfo that will print the information for this user's account using console.log.
+									It may be helpful, as well, to create a printBalance function that will ONLY print the balance and not the rest of the info.</li><br>
+				              	<li>After we have the our printAccountInfo function, we need functions to manage our balance.
+									First, we will need a setBalance function, which will do exactly that, set the accountBalance variable to some number that is passed as a parameter to the setBalance function.</li><br>
+				              	<li>Next we will need withdraw() and deposit() functions, which will accept a parameter, and use the setBalance function to either add or remove that parameter from the accountBalance function.</li><br>
+				              	<li>Our customers may also want to change their address. Let's create a setAddress function that will accept a string as a parameter, and set the address variable to that string.</li><br>
+				              	<li>Let's say we are the most kick ass bank in the world, and we are giving awesome interest rates on savings accounts.
+									Let's say we give a 3% interest rate, and we give it EVERY SINGLE DAY.
+									Make a new function called giveInterest which will increase the balance by 3%.</li><br>
+				              	<li>One of the selling points of our bank is this awesome interest rate. Sometimes we get requests from our customers to tell them what their balance will be after 10 years in the future, at 3% interest, accrued daily.
+				              		
+				              		Write a function called predictBalance that will accept 1 parameter, the # of years the want to predict, and will return the balance in the account after that amount of time.
+				              		
+				              		Important note: this function DOES NOT CHANGE the balance, it just predicts what the balance will be after X number of years at 3% interest.
+				              		
+				              		Another important note: this can be accomplished a few different ways (like everything in programming). It can be done with for loops, while loops, you can even do it with recursive functions if you want to get elegant.
+				              	</li><br>
+				              	<li>If time is left over at this point, change our variable types to ARRAYS, and modify all the functions to be able to handle multiple account holders.</li>
+				              </ol>
+				            </p>
+				            
+				           
+				            
+				          </div>
+				          
+				          
+				          
+				          <!--*****/////  Assignment Box 19  /////*****-->
+				          
+				          <div class="exercise_text" data-index="19" >
+
+				            <h2> Understanding Command Line </h2>
+				            				            
+				            <p class="exercise_box_details">
+				            	<h5>Commands we will cover </h5> 
+								<ul>
+									<li>cd</li>
+									<li>mkdir</li>
+									<li>touch</li> 
+									<li>ls</li> 
+									<li>mv</li> 
+									<li>cp</li>
+									<li>rm</li>
+									<li>cat</li>
+									<li>(vim?)</li>
+									<li>sudo</li>
+								</ul>
+
+								<h5>FOLDER STRUCTURE</h5>
+									<ul>
+										<li>robot</li>
+											<ul>
+												<li>torso</li>
+												<ul>
+													<li>neck</li>
+													<ul>
+														<li>head</li>
+													</ul>
+													<li>left_arm</li>
+													<ul>
+														<li>left_thumb</li>
+														<li>left_index</li>														<li>left_thumb</li>
+														<li>left_middle</li>
+														<li>left_ring</li>
+														<li>left_pinky</li>
+													</ul>
+													<li>right_arm</li>
+													<ul>
+														<li>right_thumb</li>
+														<li>right_index</li>														<li>left_thumb</li>
+														<li>right_middle</li>
+														<li>right_ring</li>
+														<li>right_pinky</li>
+													</ul>
+													<li>left_leg</li>
+													<ul>
+														<li>left_foot</li>
+													</ul>
+													<li>right_leg</li>
+													<ul>
+														<li>right_foot</li>
+													</ul>
+												</ul>
+											</ul>
+									</ul>
+								<img src="img/chart.jpg" />
+
+
+
+								<h5>TASKS</h5>
+
+								<ol>
+									<li>
+										<p>Today we are going to create a Robot using only the command line and folder structure.  We will use BASH commands to get around in the terminal and create all of the elements of our robot we will need. First we need to be in the user directory of our computer.</p>
+
+										<p><strong>cd ~ </strong>Brings you to the user directory of your computer</p>
+										<p><strong>mkdir robot </strong>Creates a folder called robot</p>
+										<p><strong>cd robot </strong>Brings you into the robot directory</p>
+										<p><strong>mkdir torso </strong>Creates the torso directory</p>
+									</li>
+
+									<li>
+										Everything will branch off of the torso directory like it does in real life so everything else in our robot will be a subdirectory of the torso.
+										<p><strong>cd torso </strong>Changes your current directory to the torso directory</p>	
+									</li>
+
+									<li> 
+										<p>We’ll start with creating the head.</p>
+										<p><strong>mkdir neck </strong>Will create a directory with the name neck for us.</p>
+										<p><strong>cd neck </strong>Changes our current directory to the neck directory.</p>
+										<p><strong>mkdir head </strong>Will create the head directory.</p>
+							 		</li>
+
+							 		<li>
+							 			<p>Now you can see how we will create directories and move in to subfolders.
+										<p>If we want to get back to our user directory we can type: 
+										<strong>cd ~</strong></p>
+										<p>To get to the torso directory we would type:
+										<strong>cd ~/robot/torso</strong></p>
+										<p>inally, you can move up to a parent directory by typing 
+										<strong>cd ..</strong></p>
+							 		</li>
+
+							 		<li>Using the directory structure diagram, continue to create all of the directories necessary to create our robot.</li>
+
+							 		<li>
+									<h5>THE BRAIN</h5>
+
+										<p>Our robot needs a brain.  To do this we will need to create a file in the head folder called brain.  It is very easy to create a new file in command line using the touch command.</p>
+										<p>Move to the head folder using the cd command.</p>  
+										<p><strong>cd ~/robot/torso/neck/head</strong></p>
+										<p>Then simply type:
+										<strong>touch brain.txt</strong></p>
+										<p>This will create a file called brain.txt in the current directory which in our case is the head directory.
+										Now we need to prove to ourselves that we created the file.  To do this we can list the contents of the head directory using the ls command.</p>
+										<p>Simply type: <strong>ls</strong></p> 
+										<p>sudo apt-get install vim  (if necessary)</p>
+										<p><strong>vim brain.txt </strong></p> 
+										<p>Let's discuss how to write contents of file through vim</p>
+									</li>
+
+									<li>
+										<p>Let's verify that our brain has content.</p>
+										<p>Type: <strong>cat brain.txt</strong> This command allows us to diplay the contents of a file.
+									</li>
+
+									<li>
+										<p>Lets create some wires that will exist in our robot's arms and legs.  We will create one file called wire.txt and then copy it to other areas of the robot. </p>
+										<p>First navigate to the left arm.   <strong>cd ~/robot/torso/left_arm</strong></p>
+										<p>Create the wire.txt file with <strong>touch wire.txt</strong></p>
+										<p>Now we will copy that file to different areas, for example :</p>
+										<p><strong>cp wire.txt ~/robot/torso/right_arm/wire.txt</strong></p>
+									</li>
+
+									<li>
+										<p>Now we need to give our robot life.  We will add a battery to the robot where it's heart is and make it start to work.  Then we will remove the battery to turn it off.</p>  
+										<p>Navigate to the torso of the robot.  We will create the battery/heart of the robot with: </p>
+										<p><strong>touch battery.txt</strong></p>
+										<p>Use <strong>rm battery.txt</strong> to turn the robot off.</p>
+										<p>Use <strong>ls</strong> to verify that the file has been deleted. </p>  
+										<p>Use <strong>touch battery.txt</strong> to bring it back. </p>
+									</li>
+				            </p>
+				            
+				          </div>
+
+				          <!--*****/////  Assignment Box 20  /////*****-->
+				          
+				          <div class="exercise_text" data-index="20" >
+
+				            <h2> Banking on it! </h2>
+				            				            
+				            <p class="exercise_box_details">
+				              In this part of the class we are going to get in to the nitty gritty of why and how we actually use javascript
+				            </p>
+				            
+				            <p class="exercise_box_details">
+				              We are going to be working in ACTUAL JS files (gasp!) and writing code that actually gets loaded through a SCRIPT tag on a page.
+				            </p>
+				            
+				            <p class="exercise_box_details">
+				              Go ahead and download the course materials for this exercise <a href="Day3.zip">HERE</a>, all the instructions are provided inside! Good Luck!
+				            </p>
+				            
+				          </div>
+				          
+				          <!--*****/////  Assignment Box 21  /////*****-->
+				          
+				          <div class="exercise_text" data-index="21" >
+
+				            <h2> With Great Power Comes Great Responsibility </h2>
+				            				            
+				            <p class="exercise_box_details">
+				              It's time to take everything we've learned in the class this far and build one big awesome project with it!
+				              You're going to be building a whole bunch of functions today.
+				              Go ahead and download today's course materials <a href="Day 4.zip">HERE</a>. All the necessary instructions are included in the scripts.js file inside it!
+				            </p>
+				            
+				          </div>
+
+					  	<!-- </div> -->
+				</div>
+  				
+
+				
+
+		    </section>
+
+		  <a class="exit-off-canvas"></a>
+
+		  </div>
+		</div>
+
+		<footer class="footer">
+      		<div class="copyright">
+        		<h3>Copyright &copy; 2014 Charleston Digital Corridor</h3>
+        		<img class="cdc_logo" src="img/cdc_logo.png" />
+   			</div>
+    	</footer>
+		
+   </div>
+
+    
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script src="js/site.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>

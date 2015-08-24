@@ -1,0 +1,119 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: helvetica neue;
+	letter-spacing: 1px;
+}
+
+.clearfix {
+	clear: both;
+}
+
+.header {
+	.logo {
+		position: fixed;
+		width: 60px;
+		height: 60px;
+		line-height: 60px;
+		top: 20px;
+		left: 20px;
+		background: white;
+		text-align: center;
+		color: darkblue;
+
+		span {
+			color: gold;
+		}
+	}
+
+	.menu-items {
+		position: fixed;
+		top: 0;
+		right: 20px;
+		background: white;
+		width: 60px;
+		text-align: center;
+
+		.icon {
+			line-height: 60px;
+		}
+	}
+}
+
+.main {
+
+}
+
+.hero-banner {
+	background-image: url('../images/hero.jpg');
+	background-size: cover;
+	padding: 100px 0;
+
+	.button {
+		line-height: 120px;
+		width: 50%;
+		font-size: 24px;
+		display: block;
+		margin: 0 auto;
+		border: 1px solid white;
+		text-align: center;
+		color: white;
+		text-decoration: none;
+		font-weight: 100;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+}
+
+.line {
+	width: 1px;
+	margin:0 auto;
+	background: #ccc;
+	height: 60px;
+}
+
+.three-things {
+	border: 1px solid #ccc;
+	width: 90%;
+	max-width: 1000px;
+	margin: 0 auto;
+
+	.section {
+		width: 33.33%;
+		float: left;
+		padding: 30px;
+
+		.text {
+			padding-left: 70px;
+			position: relative;
+
+			.icon {
+				width: 40px;
+				height: 40px;
+				border: 1px solid darkblue;
+				position: absolute;
+				top: 10px;
+				left: 10px;
+				border-radius: 50%;
+			}
+		}
+
+		.title {
+			font-size: 32px;
+			font-weight: 300;
+			color: brown;
+		}
+
+		.button {
+			display: block;
+			width: 100%;
+			background: darkblue;
+			color: white;
+			text-align: center;
+			text-decoration: none;
+			line-height: 50px;
+			margin-top: 20px;
+		}
+	}
+}
