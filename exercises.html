@@ -121,8 +121,25 @@
 					  					<li class="exercise assignment" data-index="24"> Transitions Intro </li>
 					  					<li class="exercise assignment" data-index="25"> Exercise 8 </li>
 					  					<li class="exercise assignment" data-index="26"> Exercise 9 </li>
-					  					<li class="exercise assignment" data-index="27"> Exercise 9 </li>
-					  					<li class="exercise assignment" data-index="28"> Devtools Tip </li>
+					  					<li class="exercise assignment" data-index="27"> Exercise 10 </li>
+					  					<li class="exercise assignment" data-index="28"> Exercise 10 Bonus </li>
+				  					</ul>
+				  				</li>
+
+				  				<li class="exercise-day"> <span> Keyframe Animations </span>
+				  					<ul class="exercise-list">
+					  					<li class="exercise assignment" data-index="29"> Animations Intro </li>
+					  					<li class="exercise assignment" data-index="30"> Exercise 11 </li>
+					  					<li class="exercise assignment" data-index="31"> Exercise 12 </li>
+					  					<li class="exercise assignment" data-index="32"> Exercise 13 </li>
+					  					<li class="exercise assignment" data-index="33"> Exercise 14 </li>
+					  					<li class="exercise assignment" data-index="34"> Exercise 15 </li>
+				  					</ul>
+				  				</li>
+
+				  				<li class="exercise-day"> <span> Project 2 </span>
+				  					<ul class="exercise-list">
+					  					<li class="exercise assignment" data-index="35"> Download </li>
 				  					</ul>
 				  				</li>
 				  			</ul>
@@ -564,6 +581,433 @@ body {
 								TIME is the time in which to make the transition, usually in milliseconds
 								<br><br>
 								TIMING_FUNCTION is what tells the computer "at what rate do I make the change" between two CSS values. <a href="http://cubic-bezier.com/#.17,.67,.83,.67">Click here</a> to learn more about timing functions.
+							</p>
+				            
+				          </div>
+
+				          <!--*****/////  Assignment Box 2s  /////*****-->
+				          
+				          <div class="exercise_text" data-index="25" >
+
+				            <h2> Exercise 8 </h2>
+
+				            <p class="exercise_box_details">
+				            	Let's get some practice in with transitions.
+				            	<br>
+				            	First, I want you to fork this codepen:
+				            </p>
+
+			          		<p>
+				              <iframe height='268' scrolling='no' src='//codepen.io/JoshuaSoileau/embed/NqZZdo/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/JoshuaSoileau/pen/NqZZdo/'>Transitions pt. 1 - Hover fading</a> by JoshuaSoileau (<a href='http://codepen.io/JoshuaSoileau'>@JoshuaSoileau</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+				            </p>
+			
+							<p class="exercise_box_details">
+								Next, I want you to style it so that it looks like this:
+							</p>
+
+							<img src="img/exercise-8-1.png" alt="" />
+
+							<p class="exercise_box_details">
+								<br>FYI, those colors are "lightblue" and "white".
+							</p>
+
+							<p class="exercise_box_details">
+								Next, I want you to style the "hover" state of the button like this:
+							</p>
+
+							<img src="img/exercise-8-2.png" alt="" />
+
+							<p class="exercise_box_details">
+								<strong>
+									But I want you to put a 300ms ease transition on the changes for the hover state.
+								</strong>
+							</p>
+
+				            
+				          </div>
+
+				          <!--*****/////  Assignment Box 2s  /////*****-->
+				          
+				          <div class="exercise_text" data-index="26" >
+
+				            <h2> Exercise 9 </h2>
+
+				            <p class="exercise_box_details">
+				            	Now we're going to do something a good bit fancier than just a straight background transition.
+				            	<br><br>
+				            	We're going to accomplish the same thing we did before, but with a new effect.
+				            	<br><br>
+				            	I want you to use a "white" psuedoelement on the button to give the illusion of a background "sliding up" on the button, instead of fadeing in.
+								<br><br>
+								Let me explain in pictures, this is the transition I want:
+				            </p>
+
+							<img src="img/exercise-8-1.png" alt="" />
+							<img src="img/exercise-8-3.png" alt="" />
+							<img src="img/exercise-8-4.png" alt="" />
+							<img src="img/exercise-8-5.png" alt="" />
+							<img src="img/exercise-8-2.png" alt="" />
+
+							<p class="exercise_box_details">
+								<br>
+								Branch off of this codepen to begin:
+							</p>
+
+			          		<p>
+				              <iframe height='268' scrolling='no' src='//codepen.io/JoshuaSoileau/embed/xGooqR/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/JoshuaSoileau/pen/xGooqR/'>Transitions pt. 1 - Hover Sliding Change</a> by JoshuaSoileau (<a href='http://codepen.io/JoshuaSoileau'>@JoshuaSoileau</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+				            </p>
+
+				            <p class="exercise_box_details">
+				            	Let's talk about how this works.
+				            </p>
+
+				            <p class="exercise_box_details">
+				            	The "button" now has a "span" inside of it.
+				            </p>
+
+				            <p class="exercise_box_details">
+				            	We are putting an <strong>absolutely positioned</strong> "after" psuedoelement on the button (and relative to the button).
+				            </p>
+
+				            <p class="exercise_box_details">
+				            	That psuedoelement will have a white background, and will be 100% the width and 100% the height of the button.
+				            </p>
+
+				            <p class="exercise_box_details">
+				            	Our "transition" will occur on the value for "top" on the psueodelement. It will default to 100%. On hover of the button, it will change to 0%. That is the transition of the "slide" that you see in the images, the transition of the psuedoelement going from all the way at the bottom, up to the top of the element.
+				            </p>
+
+				            <p class="exercise_box_details">
+				            	<strong>Be careful of the z-index issue!</strong>
+				            	<br>
+				            	You may notice that our psuedo element covers up our text!
+				            	<br>
+				            	To fix this, we need to force the text to a higher z-index than the psuedo element (that is the reason for an extra "span" element in the HTML).
+				            </p>
+				            
+				          </div>
+
+				          <!--*****/////  Assignment Box 2s  /////*****-->
+				          
+				          <div class="exercise_text" data-index="27" >
+
+				            <h2> Exercise 10 </h2>
+
+				            <p class="exercise_box_details">
+				            	Now we're going to transition a fun value called "transform".
+				            	<br>
+				            	"Transform" is an awesome CSS3 property that allows you to do all kinds of awesome stuff.
+				            	<br>
+				            	You can:
+				            	<ol>
+				            		<li>Rotate Elements</li>
+									<li>Grow & Shrink Elements</li>
+									<li>Skew Elements</li>
+									<li>Shift Elements Around</li>
+									<li>Give a 3d Effect to Elements</li>
+				            	</ol>
+								<a href="https://css-tricks.com/almanac/properties/t/transform/">Read here</a> for more information on what you can do with the "transform" property.
+				            </p>
+
+				            <p class="exercise_box_details">Here's an example of what a transform property looks like:</p>
+
+				            <pre class="visible">
+transform: rotate(45deg);
+				            </pre>
+
+				            <p class="exercise_box_details">
+				            	This transform would shift an element and rotate it 45 degrees.
+				            </p>
+
+				            <p class="exercise_box_details">
+				            	And with transitions, you can perform that rotation over time, making elements spin!
+				            </p>
+
+				            <p class="exercise_box_details">
+				            	Your next Exercise will be to perform a 360 degree rotation transition to each of the social icons in this codepen. Fork it and get to work!
+				            </p>
+
+				            <p class="exercise_box_details">
+				            	<iframe height='268' scrolling='no' src='//codepen.io/JoshuaSoileau/embed/EjBBmy/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/JoshuaSoileau/pen/EjBBmy/'>Rotation Exercise</a> by JoshuaSoileau (<a href='http://codepen.io/JoshuaSoileau'>@JoshuaSoileau</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+				            </p>
+				            
+				          </div>
+
+				          <!--*****/////  Assignment Box 2s  /////*****-->
+				          
+				          <div class="exercise_text" data-index="28" >
+
+				            <h2> Exercise 10 bonus </h2>
+
+				            <p class="exercise_box_details">
+				            	Redo exercise 10, but in addition to transitioning a rotation, transition the background color of the icons to white and the color of the text to "lightblue".
+				            </p>
+				            
+				          </div>
+
+				          <!--*****/////  Assignment Box 2s  /////*****-->
+				          
+				          <div class="exercise_text" data-index="29" >
+
+				            <h2> Keyframe Animations Require 2 Pieces </h2>
+
+				            <p class="exercise_box_details">
+				            	<a href="https://css-tricks.com/snippets/css/keyframe-animation-syntax/">Click Here</a> for more information on Keyframe Animations.
+				            </p>
+
+				            <pre class="visible">
+A "Keyframe" Declaration with a name</pre>
+
+							<pre class="visible">
+An "Animation" CSS property on an element, 
+with the name of the "Keyframe" declaration</pre>
+
+				            <p class="exercise_box_details">
+				            	First, we create a "keyframe" animation.
+				            	<br>
+				            	These work using this syntax:
+				            </p>
+
+				            <pre class="visible">
+@keyframe ANIMATION_NAME {
+	0% {
+		BEGINNING CSS VALUES HERE
+	}
+	100% {
+		FINAL CSS VALUES HERE
+	}
+}</pre>
+							<p class="exercise_box_details">
+								<i>There are, of course, different vendor prefixes you'll need to get these to work in the various browsers. Use the link above to learn more about those.</i>
+							</p>
+
+							<p class="exercise_box_details">
+								Looking at the code above, we have a starting point (0%) and an ending point (100%).
+								<br>
+								The CSS values inside each section will transition between the beginning and ending values <i>as long as they are CSS properties that can have a transition (like color or font-size, not "display" or "position")</i>.
+								<br>
+								Let's look at an example
+							</p>
+
+							<pre class="visible">
+@keyframe dark-to-light {
+	0% {
+		background: black;
+	}
+	100% {
+		background: white;
+	}
+}</pre>
+
+							<p class="exercise_box_details">
+								In this example, our background would change from black to white. Also, remember that <strong>unless specified, animations will continue forever</strong>, so this animation will go from black to white, over and over and over again.
+							</p>
+
+							<p class="exercise_box_details">
+								Another cool thing about keyframe animations is that we don't just have to have starting and ending values, we can put different css IN THE MIDDLE AS WELL.
+								<br>
+								Let's look at another example:
+							</p>
+
+							<pre class="visible">
+@keyframe merica {
+	0% {
+		background: red;
+	}
+	50% {
+		background: white;
+	}
+	100% {
+		background: blue;
+	}
+}</pre>
+							<p class="exercise_box_details">
+								In this example, we inserted a "50%" point in our keyframe animation. Now, our animation will change the background from red to white to blue!
+								<br>
+								You can use any percentage values here. They don't even have to be in order!
+							</p>
+
+							<h4>The other thing we need for animations to work is our "animation" property</h4>
+
+							<p class="exercise_box_details">
+								Having a keyframe declaration alone doesn't do anything. We apply these animations to elements in CSS using the "animation" declaration like this:
+							</p>
+
+							<pre class="visible">
+div {
+	animation: dark-to-light 1s;
+}</pre>
+							<p class="exercise_box_details">
+								Or
+							</p>
+
+							<pre class="visible">
+div {
+	animation: dark-to-light 1s infinite;
+}</pre>
+				            
+							<p class="exercise_box_details">
+								The syntax is important here.
+								<pre class="visible">animation: ANIMATION_NAME how_long_it_should_take HOW_MANY_TIMES_IT_SHOULD_RUN</pre>
+								<br>
+								If you don't supply the number of times for the animation to run, it'll assume you meant for the animation to run indefinitely.
+								<br>
+								So, for our example above, we want to run the animation with the name "dark-to-light", it should take 1s to run once, and it should run indefinitely.
+								<br><br>
+								<strong>Just like keyframe declarations, the "animation" property requires vendor prefixes to work properly in all the browsers.</strong> See the link at the top of the page for more information.
+							</p>
+
+				          </div>
+
+				          <!--*****/////  Assignment Box 2s  /////*****-->
+				          
+				          <div class="exercise_text" data-index="30" >
+
+				            <h2> Exercise 11 </h2>
+
+				            <p class="exercise_box_details">
+				            	In this exercise we'll be creating a keyframe animation to adjust the height of an element over a period of 1 second.
+				            	<br><br>
+				            	Fork off of this codepen and we'll begin:
+				            </p>
+
+				            <p class="exercise_box_details">
+				            	<iframe height='268' scrolling='no' src='//codepen.io/JoshuaSoileau/embed/gpVGJx/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/JoshuaSoileau/pen/gpVGJx/'>Keyframe Animations - animating height</a> by JoshuaSoileau (<a href='http://codepen.io/JoshuaSoileau'>@JoshuaSoileau</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+				            </p>
+				            
+				          </div>
+
+				          <!--*****/////  Assignment Box 2s  /////*****-->
+				          
+				          <div class="exercise_text" data-index="31" >
+
+				            <h2> Exercise 12 </h2>
+
+				            <p class="exercise_box_details">
+				            	In this exercise, we will be creating a keyframe animation to shift a psuedo element around the border of it's parent.
+				            	<br><br>
+				            	Fork off of this codepen and we'll begin:
+				            </p>
+
+				            <p class="exercise_box_details">
+				            	<iframe height='268' scrolling='no' src='//codepen.io/JoshuaSoileau/embed/NqZQYr/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/JoshuaSoileau/pen/NqZQYr/'>Guided Intro: Shifting Dots</a> by JoshuaSoileau (<a href='http://codepen.io/JoshuaSoileau'>@JoshuaSoileau</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+				            </p>
+				            
+				          </div>
+
+				          <!--*****/////  Assignment Box 2s  /////*****-->
+				          
+				          <div class="exercise_text" data-index="32" >
+
+				            <h2> Creating a Lunar Eclipse </h2>
+
+				            <p class="exercise_box_details">
+				            	In this exercise, we are going to be animating another psuedo element.
+				            	<br>
+				            	<br>
+				            	This one may be a little bit confusing.
+				            	<br>
+				            	Fork off this codepen to get start, the instructor will provide instruction in class.
+				            </p>
+
+				            <p class="exercise_box_details">
+				            	<iframe height='268' scrolling='no' src='//codepen.io/JoshuaSoileau/embed/xGooML/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/JoshuaSoileau/pen/xGooML/'>Animation: animating "left" values</a> by JoshuaSoileau (<a href='http://codepen.io/JoshuaSoileau'>@JoshuaSoileau</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+				            </p>
+				            
+				          </div>
+
+				          <!--*****/////  Assignment Box 2s  /////*****-->
+				          
+				          <div class="exercise_text" data-index="33" >
+
+				            <h2> Creatings a g-g-g-ghoooost! </h2>
+
+				            <p class="exercise_box_details">
+				            	This is a fun one.
+				            	<br><br>
+				            	In this exercise, we are going to be creating two animations.
+				            	<br><br>
+				            	There are 2 elements on the page we should worry about, the ".ghost" element and the ".shadow" element.
+				            	<br><br>
+				            	Create 2 keyframe animations, the first should shift the ghost up 20px and down again (using transform: translate, not "top" or "margin").
+				            	<br>
+				            	The second should use "transform: scale" to shrink the shadow down to 50% of it's original size, and then back again.
+				            </p>
+
+				            <p class="exercise_box_details">
+				            	<iframe height='268' scrolling='no' src='//codepen.io/JoshuaSoileau/embed/jPjgpB/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/JoshuaSoileau/pen/jPjgpB/'>Animating a Ghost</a> by JoshuaSoileau (<a href='http://codepen.io/JoshuaSoileau'>@JoshuaSoileau</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+				            </p>
+				            
+				          </div>
+
+				          <!--*****/////  Assignment Box 2s  /////*****-->
+				          
+				          <div class="exercise_text" data-index="34" >
+
+				            <h2> Creating Loading Bars </h2>
+
+				            <p class="exercise_box_details">
+				            	In this exercise, we are going to be creating 1 keyframe animation and applying it to 4 elements.
+				            	<br><br>
+				            	The keyframe animation should transition the grey circular psuedo elements on each bar from widths of 30% to widths of 80% and back again.
+				            </p>
+
+				            <p class="exercise_box_details">
+				            	<iframe height='268' scrolling='no' src='//codepen.io/JoshuaSoileau/embed/rVEEQW/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/JoshuaSoileau/pen/rVEEQW/'>Animations: adjusting widths</a> by JoshuaSoileau (<a href='http://codepen.io/JoshuaSoileau'>@JoshuaSoileau</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+				            </p>
+
+				            <p class="exercise_box_details">
+				            	<strong>BONUS EXERCISE</strong>. Adjust this exercise to add a new CSS property called "animation-delay" to change the starting times of the 4 bars to be different from eachother
+				            </p>
+				            
+				          </div>
+
+				          <!--*****/////  Assignment Box 2s  /////*****-->
+				          
+				          <div class="exercise_text" data-index="35" >
+
+				            <h2> Project 2 </h2>
+
+				            <p class="exercise_box_details">
+				            	We will be building a page layout for our last project using SASS & PrePros
+				            	<br>
+				            	<br>
+
+								<img src="project-2/mockup.png" />
+				            </p>
+
+				            <p class="exercise_box_details">
+				            	Download the ZIP file for this project <a href="project-2/project-2.zip">here</a>.
+								Once downloaded, unzip the file, and drag and drop the corresponding folder into prepros.
+								This will create a new project in prepros.
+				            </p>
+				            
+							<p class="exercise_box_details">
+								All of the HTML markup needed to create this page is already in the index.html file.
+							</p>
+
+							<p class="exercise_box_details">
+								Create a new folder called 
+								<pre class="visible">scss</pre>
+								and a file inside it labeled
+								<pre class="visible">scss/styles.scss</pre>
+							</p>
+
+							<p class="exercise_box_details">
+								Put all your SASS in this file, and it will be compiled and put into separate folder and file called
+								<pre class="visible">css/styles.css</pre>
+							</p>
+
+							<p class="exercise_box_details">
+								We will spend the remainder of class building out the SCSS for the HTML markup to get it to look like the mockup above.
 							</p>
 				            
 				          </div>
