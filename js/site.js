@@ -36,13 +36,21 @@ $('.button').click(function(){
 	$(this).addClass('active-button');
 	btn_index = $(this).data('index');
 	
-	if(btn_index==1){
+	if(btn_index==1){ // class
 		$('.active-list').removeClass('active-list');
 		$('.class-list').addClass('active-list');
-	}
-	else{
+	} else if(btn_index==2) { // general
 		$('.active-list').removeClass('active-list');
 		$('.general-list').addClass('active-list');
+	} else if(btn_index==3){ // last
+		$('.active-list').removeClass('active-list');
+		$('.resources-list').addClass('active-list');
+	} else if(btn_index==4){ // last
+		$('.active-list').removeClass('active-list');
+		$('.frontend-list').addClass('active-list');
+	} else { // last
+		$('.active-list').removeClass('active-list');
+		$('.backend-list').addClass('active-list');
 	}
 });
 

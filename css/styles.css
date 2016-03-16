@@ -308,6 +308,22 @@ li.resource-link{
     width: 215px;
 }
 
+#resources-btn{
+    width: 215px;
+}
+
+#resources-btn{
+    width: 215px;
+}
+
+#frontend-btn{
+    width: 215px;
+}
+
+#backend-btn{
+    width: 215px;
+}
+
 div.button-wrapper{
     margin-left: 5px;
 	
@@ -318,6 +334,18 @@ div.button-wrapper{
 }
 
 .general-list{
+	display: none;
+}
+
+.resources-list{
+	display: none;
+}
+
+.frontend-list{
+	display: none;
+}
+
+.backend-list{
 	display: none;
 }
 
